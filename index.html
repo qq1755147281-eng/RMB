@@ -1096,17 +1096,18 @@
   /* ===== Team - Table ===== */
   .team-table-wrapper {
     overflow-x: auto;
-    margin: 20px 0;
-    border-radius: 12px;
+    margin: 16px 0;
+    border-radius: 10px;
     border: 1px solid var(--border);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    -webkit-overflow-scrolling: touch;
   }
 
   .team-table {
     width: 100%;
-    min-width: 900px;
+    min-width: 520px;
     border-collapse: collapse;
-    font-size: 15px;
+    font-size: 12px;
     background: #ffffff;
     table-layout: fixed;
   }
@@ -1115,47 +1116,47 @@
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: #ffffff;
     font-weight: 600;
-    padding: 16px 14px;
+    padding: 10px 6px;
     text-align: center;
     white-space: nowrap;
-    font-size: 15px;
-    letter-spacing: 0.5px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
   }
 
   .team-table th:first-child {
-    border-radius: 12px 0 0 0;
-    width: 90px;
+    border-radius: 10px 0 0 0;
+    width: 42px;
   }
 
   .team-table th:nth-child(2) {
-    width: 140px;
+    width: 60px;
   }
 
   .team-table th:nth-child(3) {
-    width: 170px;
+    width: 76px;
   }
 
   .team-table th:nth-child(4) {
-    width: 170px;
+    width: 72px;
   }
 
   .team-table th:nth-child(5) {
-    width: 120px;
+    width: 60px;
   }
 
   .team-table th:last-child {
-    border-radius: 0 12px 0 0;
+    border-radius: 0 10px 0 0;
   }
 
   .team-table td {
-    padding: 14px;
+    padding: 8px 4px;
     text-align: center;
     border-bottom: 1px solid var(--border);
     color: var(--text);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .team-table tr:last-child td {
@@ -1163,11 +1164,11 @@
   }
 
   .team-table tr:last-child td:first-child {
-    border-radius: 0 0 0 12px;
+    border-radius: 0 0 0 10px;
   }
 
   .team-table tr:last-child td:last-child {
-    border-radius: 0 0 12px 0;
+    border-radius: 0 0 10px 0;
   }
 
   .team-table tr:hover td {
@@ -1175,47 +1176,47 @@
   }
 
   .team-table .seq-cell {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary);
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .team-table .name-cell {
-    font-weight: 700;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 12px;
   }
 
   .team-table .role-cell {
     color: var(--primary);
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 12px;
   }
 
   .team-table .address-cell {
     text-align: center;
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .team-table .remark-cell {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .team-table .remark-cell.pending {
     color: #f59e0b;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .team-table .status-cell {
     font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 6px;
+    padding: 3px 8px;
+    border-radius: 4px;
     display: inline-block;
-    min-width: 70px;
+    min-width: 40px;
     background: rgba(34, 197, 94, 0.15);
     color: #16a34a;
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .team-stats-row {
@@ -1346,16 +1347,38 @@
     }
 
     .main {
-      padding: 24px 16px;
+      padding: 20px 12px;
     }
 
     .content-area {
-      padding: 28px 20px;
+      padding: 24px 16px;
       min-height: 300px;
+    }
+
+    #view-team .page-content {
+      padding: 0;
+      font-size: 14px;
+    }
+
+    #view-team .content-area {
+      padding: 20px 12px;
+    }
+
+    #view-team .content-area > p:first-of-type {
+      margin-bottom: 12px;
+      font-size: 13px;
     }
 
     .page-title {
       font-size: 22px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+    }
+
+    #view-team .page-title {
+      font-size: 20px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
     }
 
     .stats-grid {
@@ -1407,16 +1430,41 @@
     }
 
     .team-table-wrapper {
-      font-size: 14px;
+      font-size: 11px;
     }
 
     .team-table th,
     .team-table td {
-      padding: 12px 8px;
+      padding: 7px 3px;
+      font-size: 11px;
+    }
+
+    .team-table th {
+      font-size: 11px;
+      padding: 9px 4px;
     }
 
     .team-table .address-cell {
-      font-size: 13px;
+      font-size: 11px;
+    }
+
+    .team-table .remark-cell {
+      font-size: 10px;
+    }
+
+    .team-table .status-cell {
+      font-size: 10px;
+      padding: 2px 6px;
+      min-width: 34px;
+    }
+
+    .team-table .seq-cell,
+    .team-table .name-cell {
+      font-size: 11px;
+    }
+
+    .team-table .role-cell {
+      font-size: 11px;
     }
   }
 </style>
