@@ -906,6 +906,98 @@
     color: var(--text-secondary);
   }
 
+  /* ===== Team - Table ===== */
+  .team-table-wrapper {
+    overflow-x: auto;
+    margin: 16px 0;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .team-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: #ffffff;
+  }
+
+  .team-table th {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 10px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .team-table th:first-child {
+    border-radius: 10px 0 0 0;
+  }
+
+  .team-table th:last-child {
+    border-radius: 0 10px 0 0;
+  }
+
+  .team-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .team-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .team-table tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+  }
+
+  .team-table tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+  }
+
+  .team-table tr:hover td {
+    background: rgba(200, 16, 46, 0.04);
+  }
+
+  .team-table .seq-cell {
+    font-weight: 600;
+    color: var(--primary);
+    width: 50px;
+  }
+
+  .team-table .name-cell {
+    font-weight: 600;
+  }
+
+  .team-table .role-cell {
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  .team-table .address-cell {
+    text-align: left;
+    color: var(--text-secondary);
+  }
+
+  .team-table .remark-cell {
+    color: var(--text-secondary);
+    font-size: 12px;
+  }
+
+  .team-table .remark-cell.pending {
+    color: #f59e0b;
+    font-weight: 500;
+  }
+
+  .team-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
   /* ===== Footer Navigation ===== */
   .footer {
     background: #ffffff;
@@ -1085,6 +1177,19 @@
 
     .nav-btn-label {
       font-size: 10px;
+    }
+
+    .team-table-wrapper {
+      font-size: 12px;
+    }
+
+    .team-table th,
+    .team-table td {
+      padding: 8px 6px;
+    }
+
+    .team-table .address-cell {
+      font-size: 11px;
     }
   }
 </style>
@@ -1443,88 +1548,72 @@
       <section id="view-team" class="view">
         <h1 class="page-title">团队明细</h1>
         <div class="page-content">
-          <p>以下是推广团队的核心成员信息及业绩统计：</p>
+          <p>以下是推广团队成员信息明细：</p>
 
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-number">128</div>
-              <div class="stat-label">团队总人数</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">5,680</div>
-              <div class="stat-label">累计推广用户</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">89%</div>
-              <div class="stat-label">任务完成率</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">¥328K</div>
-              <div class="stat-label">累计佣金</div>
-            </div>
-          </div>
-
-          <h2>核心成员</h2>
-          <div class="team-list">
-            <div class="team-member">
-              <div class="member-avatar">张</div>
-              <div class="member-info">
-                <div class="member-name">张明</div>
-                <div class="member-role">团队负责人</div>
-              </div>
-              <div class="member-stats">
-                <div class="number">1,256</div>
-                <div class="label">推广人数</div>
-              </div>
-            </div>
-
-            <div class="team-member">
-              <div class="member-avatar">李</div>
-              <div class="member-info">
-                <div class="member-name">李华</div>
-                <div class="member-role">推广主管</div>
-              </div>
-              <div class="member-stats">
-                <div class="number">892</div>
-                <div class="label">推广人数</div>
-              </div>
-            </div>
-
-            <div class="team-member">
-              <div class="member-avatar">王</div>
-              <div class="member-info">
-                <div class="member-name">王芳</div>
-                <div class="member-role">推广主管</div>
-              </div>
-              <div class="member-stats">
-                <div class="number">756</div>
-                <div class="label">推广人数</div>
-              </div>
-            </div>
-
-            <div class="team-member">
-              <div class="member-avatar">陈</div>
-              <div class="member-info">
-                <div class="member-name">陈强</div>
-                <div class="member-role">高级推广员</div>
-              </div>
-              <div class="member-stats">
-                <div class="number">534</div>
-                <div class="label">推广人数</div>
-              </div>
-            </div>
-
-            <div class="team-member">
-              <div class="member-avatar">刘</div>
-              <div class="member-info">
-                <div class="member-name">刘洋</div>
-                <div class="member-role">高级推广员</div>
-              </div>
-              <div class="member-stats">
-                <div class="number">489</div>
-                <div class="label">推广人数</div>
-              </div>
-            </div>
+          <div class="team-table-wrapper">
+            <table class="team-table">
+              <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>姓名</th>
+                  <th>身份</th>
+                  <th>户籍地址</th>
+                  <th>备注</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="seq-cell">1</td><td class="name-cell">张明</td><td class="role-cell">团队负责人</td><td class="address-cell">浙江省杭州市西湖区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">2</td><td class="name-cell">李华</td><td class="role-cell">推广主管</td><td class="address-cell">浙江省宁波市鄞州区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">3</td><td class="name-cell">王芳</td><td class="role-cell">推广主管</td><td class="address-cell">浙江省温州市鹿城区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">4</td><td class="name-cell">陈强</td><td class="role-cell">高级推广员</td><td class="address-cell">浙江省嘉兴市南湖区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">5</td><td class="name-cell">刘洋</td><td class="role-cell">高级推广员</td><td class="address-cell">浙江省湖州市吴兴区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">6</td><td class="name-cell">赵敏</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市越城区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">7</td><td class="name-cell">钱伟</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市婺城区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">8</td><td class="name-cell">孙丽</td><td class="role-cell">推广员</td><td class="address-cell">浙江省衢州市柯城区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">9</td><td class="name-cell">周杰</td><td class="role-cell">推广员</td><td class="address-cell">浙江省舟山市定海区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">10</td><td class="name-cell">吴婷</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市椒江区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">11</td><td class="name-cell">郑浩</td><td class="role-cell">推广员</td><td class="address-cell">浙江省丽水市莲都区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">12</td><td class="name-cell">王磊</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市海曙区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">13</td><td class="name-cell">冯雪</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市拱墅区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">14</td><td class="name-cell">陈晨</td><td class="role-cell">推广员</td><td class="address-cell">浙江省温州市龙湾区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">15</td><td class="name-cell">褚斌</td><td class="role-cell">推广员</td><td class="address-cell">浙江省嘉兴市秀洲区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">16</td><td class="name-cell">卫亮</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市上虞区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">17</td><td class="name-cell">蒋俊</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市金东区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">18</td><td class="name-cell">沈娟</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市路桥区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">19</td><td class="name-cell">韩梅</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市镇海区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">20</td><td class="name-cell">杨涛</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市萧山区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">21</td><td class="name-cell">朱琳</td><td class="role-cell">推广员</td><td class="address-cell">浙江省温州市瓯海区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">22</td><td class="name-cell">秦峰</td><td class="role-cell">推广员</td><td class="address-cell">浙江省湖州市南浔区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">23</td><td class="name-cell">尤佳</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市柯桥区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">24</td><td class="name-cell">许刚</td><td class="role-cell">推广员</td><td class="address-cell">浙江省衢州市江山市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">25</td><td class="name-cell">何军</td><td class="role-cell">推广员</td><td class="address-cell">浙江省舟山市普陀区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">26</td><td class="name-cell">吕婷</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市温岭市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">27</td><td class="name-cell">施伟</td><td class="role-cell">推广员</td><td class="address-cell">浙江省丽水市青田县</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">28</td><td class="name-cell">张健</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市北仑区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">29</td><td class="name-cell">孔梅</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市余杭区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">30</td><td class="name-cell">曹鹏</td><td class="role-cell">推广员</td><td class="address-cell">浙江省温州市瑞安市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">31</td><td class="name-cell">严琳</td><td class="role-cell">推广员</td><td class="address-cell">浙江省嘉兴市嘉善县</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">32</td><td class="name-cell">华强</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市诸暨市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">33</td><td class="name-cell">金磊</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市义乌市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">34</td><td class="name-cell">魏芳</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市玉环市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">35</td><td class="name-cell">陶杰</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市慈溪市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">36</td><td class="name-cell">姜涛</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市临平区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">37</td><td class="name-cell">戚丽</td><td class="role-cell">推广员</td><td class="address-cell">浙江省温州市乐清市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">38</td><td class="name-cell">谢军</td><td class="role-cell">推广员</td><td class="address-cell">浙江省湖州市德清县</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">39</td><td class="name-cell">邹敏</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市新昌县</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">40</td><td class="name-cell">柏峰</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市永康市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">41</td><td class="name-cell">水红</td><td class="role-cell">推广员</td><td class="address-cell">浙江省衢州市龙游县</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">42</td><td class="name-cell">窦刚</td><td class="role-cell">推广员</td><td class="address-cell">浙江省舟山市岱山县</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">43</td><td class="name-cell">章婷</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市三门县</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">44</td><td class="name-cell">云涛</td><td class="role-cell">推广员</td><td class="address-cell">浙江省丽水市缙云县</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">45</td><td class="name-cell">苏梅</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市余姚市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">46</td><td class="name-cell">潘林</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市富阳区</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">47</td><td class="name-cell">葛伟</td><td class="role-cell">推广员</td><td class="address-cell">浙江省嘉兴市海宁市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">48</td><td class="name-cell">奚丽</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市嵊州市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">49</td><td class="name-cell">范健</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市东阳市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">50</td><td class="name-cell">彭勇</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市临海市</td><td class="remark-cell pending">待定</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
