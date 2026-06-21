@@ -228,6 +228,119 @@
     flex-shrink: 0;
   }
 
+  /* ===== Home - Benefits Grid ===== */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+  }
+
+  .benefit-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(200, 16, 46, 0.1);
+    border-left-color: var(--accent);
+  }
+
+  .benefit-num {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .benefit-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .benefit-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ===== Home - Merchant Benefits ===== */
+  .merchant-section {
+    background: linear-gradient(135deg, rgba(255, 209, 0, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 16px;
+    border: 1px solid rgba(255, 209, 0, 0.3);
+  }
+
+  .merchant-section h2 {
+    margin-top: 0 !important;
+  }
+
+  .merchant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .merchant-item {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .merchant-badge {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--accent) 0%, #e6c200 100%);
+    color: var(--primary-dark);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .merchant-text {
+    flex: 1;
+  }
+
+  .merchant-text strong {
+    display: block;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .merchant-text span {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
   /* ===== Promotion - Rule List ===== */
   .rule-list {
     background: #fafafa;
@@ -680,25 +793,144 @@
           <p>数字人民币（e-CNY）是由中国人民银行发行的数字形式法定货币，具有国家信用支撑，是数字化时代的重要金融基础设施。</p>
           <p>本平台致力于推动数字人民币的普及与应用，为用户提供便捷、安全、普惠的数字支付服务。</p>
 
-          <h2>平台优势</h2>
-          <ul class="feature-list">
-            <li>
-              <span class="feature-icon">¥</span>
-              <span>法定货币 - 国家信用背书，安全可靠</span>
-            </li>
-            <li>
-              <span class="feature-icon">⚡</span>
-              <span>双离线支付 - 无网络也能完成交易</span>
-            </li>
-            <li>
-              <span class="feature-icon">0</span>
-              <span>零手续费 - 转账消费全免费</span>
-            </li>
-            <li>
-              <span class="feature-icon">🔒</span>
-              <span>安全可控 - 多重加密保障资金安全</span>
-            </li>
-          </ul>
+          <h2>数字人民币十大好处</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-num">1</div>
+              <div class="benefit-title">国家法定货币，最安全</div>
+              <div class="benefit-desc">央行发行，与现金等价，国家信用背书，不存在平台倒闭、卷钱分账等风险，政府信用做保障。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">2</div>
+              <div class="benefit-title">全程 0 手续费（最核心）</div>
+              <div class="benefit-desc">收款、付款、转账、兑出兑回（现金→数币）全免费，没有微信/支付宝 2.8%、3% 那种手续费。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">3</div>
+              <div class="benefit-title">支付即结算，秒到账</div>
+              <div class="benefit-desc">不用等 T+1，7×24 小时实时到账，节假日、半夜也能立刻到账，资金周转快。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">4</div>
+              <div class="benefit-title">双离线支付，没网也能付</div>
+              <div class="benefit-desc">手机没信号、没流量，碰一碰 NFC 就能交易，菜市场、地下室等弱网环境也能完成支付。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">5</div>
+              <div class="benefit-title">实名钱包余额可计息（2026新规）</div>
+              <div class="benefit-desc">实名钱包按银行活期利率按季结息，放着也能生钱，资金增值无风险。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">6</div>
+              <div class="benefit-title">小额匿名、大额可追溯</div>
+              <div class="benefit-desc">隐私安全兼顾，小额不用绑卡，保护用户隐私；大额交易可追溯，防洗钱防诈骗。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">7</div>
+              <div class="benefit-title">无假币风险</div>
+              <div class="benefit-desc">采用加密技术，不可能造假，商户不用验钞、不用担心收到假钱，省时省心。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">8</div>
+              <div class="benefit-title">软硬钱包都支持</div>
+              <div class="benefit-desc">手机 App + 实体卡、手环等多种硬钱包，老人小孩不用智能手机也能轻松使用。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">9</div>
+              <div class="benefit-title">法偿性：商家不能拒收</div>
+              <div class="benefit-desc">法定货币，商家必须收，不像微信支付宝可以被拒收，支付畅通无阻。</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-num">10</div>
+              <div class="benefit-title">可编程智能合约</div>
+              <div class="benefit-desc">用途更广，可做预付资金监管、定向补贴、自动分账等，政府、企业、商户都能用。</div>
+            </div>
+          </div>
+
+          <div class="merchant-section">
+            <h2>推广数字人民币对商家的 10 大好处</h2>
+            <div class="merchant-grid">
+              <div class="merchant-item">
+                <div class="merchant-badge">01</div>
+                <div class="merchant-text">
+                  <strong>0 费率收款，一年省几万手续费</strong>
+                  <span>对比微信/支付宝 2.8%-3%，1 万流水一天省 28-30 元，一月省 800-900 元。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">02</div>
+                <div class="merchant-text">
+                  <strong>资金实时到账，不压款</strong>
+                  <span>不用等平台结算，收多少立刻到账，现金流更健康。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">03</div>
+                <div class="merchant-text">
+                  <strong>官方补贴多，帮你拉客流</strong>
+                  <span>政府发数字人民币消费券、满减活动，顾客更愿意来你家消费。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">04</div>
+                <div class="merchant-text">
+                  <strong>对账简单，一个码收所有</strong>
+                  <span>支持扫码、碰一碰、硬钱包，和微信支付宝一个聚合码，对账不麻烦。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">05</div>
+                <div class="merchant-text">
+                  <strong>无网也能收款，不丢生意</strong>
+                  <span>菜市场、地下室、信号差的店，照样能收款，不会因为没网跑单。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">06</div>
+                <div class="merchant-text">
+                  <strong>没有提现费、清算费、服务费</strong>
+                  <span>所有环节纯免费，不扣任何隐形费用。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">07</div>
+                <div class="merchant-text">
+                  <strong>大额收款无限制</strong>
+                  <span>一类钱包无单笔/单日上限，做生意大额收款更自由。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">08</div>
+                <div class="merchant-text">
+                  <strong>资金安全，合规无忧</strong>
+                  <span>央行系统，交易可追溯、防诈骗、防洗钱，商户不用担心资金风险。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">09</div>
+                <div class="merchant-text">
+                  <strong>吸引年轻、高端、境外顾客</strong>
+                  <span>数字人民币是新趋势，年轻人、境外游客更愿意用，提升门店档次。</span>
+                </div>
+              </div>
+              <div class="merchant-item">
+                <div class="merchant-badge">10</div>
+                <div class="merchant-text">
+                  <strong>可对接政府补贴、供应链金融</strong>
+                  <span>以后政府补贴、货款结算都倾向数字人民币，早用早享受政策红利。</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
