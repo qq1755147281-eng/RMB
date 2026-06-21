@@ -1685,7 +1685,7 @@
           <p>如果您有任何问题或需要帮助，请通过以下方式联系我们：</p>
 
           <div class="phone-breathe-container">
-            <div class="phone-breathe-wrapper">
+            <a href="tel:15536455536" class="phone-breathe-wrapper" style="text-decoration: none; color: inherit;">
               <div class="info-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -1693,8 +1693,8 @@
               </div>
               <div class="phone-breathe-label">服务热线</div>
               <div class="phone-breathe-number">15536455536</div>
-            </div>
-            <div class="phone-breathe-wrapper">
+            </a>
+            <a href="tel:13157491153" class="phone-breathe-wrapper" style="text-decoration: none; color: inherit;">
               <div class="info-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -1702,7 +1702,7 @@
               </div>
               <div class="phone-breathe-label">服务热线</div>
               <div class="phone-breathe-number">13157491153</div>
-            </div>
+            </a>
           </div>
 
           <div class="phone-breathe-container" style="margin-bottom: 16px;">
@@ -1817,6 +1817,49 @@
   </footer>
 
   <script>
+    // 点击音效生成函数（Web Audio API，无需外部文件）
+    var audioContext = null;
+    function playClickSound() {
+      try {
+        if (!audioContext) {
+          audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        var oscillator = audioContext.createOscillator();
+        var gainNode = audioContext.createGain();
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.06);
+        gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.08);
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.08);
+      } catch (e) {}
+    }
+
+    // 为底部导航按钮、奖励卡片、服务热线按钮添加点击音效
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      var isInteractive = false;
+      while (target && target !== document.body) {
+        if (target.classList && (
+            target.classList.contains('nav-btn') ||
+            target.classList.contains('reward-card') ||
+            target.classList.contains('phone-breathe-wrapper') ||
+            target.tagName === 'BUTTON' ||
+            target.tagName === 'A'
+          )) {
+          isInteractive = true;
+          break;
+        }
+        target = target.parentElement;
+      }
+      if (isInteractive) {
+        playClickSound();
+      }
+    });
+
     // 底部导航视图切换功能
     (function() {
       const navButtons = document.querySelectorAll('.nav-btn');
