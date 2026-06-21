@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>首页 - 数字人民币推广落地开启</title>
+<title>团队明细 - 数字人民币推广落地开启</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
@@ -175,41 +175,102 @@
     font-family: "Noto Serif SC", serif;
     color: var(--primary);
     font-size: 20px;
-    margin: 24px 0 12px;
+    margin: 24px 0 16px;
   }
 
-  .page-content p {
+  .page-content > p {
     margin-bottom: 16px;
   }
 
-  .feature-list {
-    list-style: none;
-    padding: 0;
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
   }
 
-  .feature-list li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
+  .stat-card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  .team-list {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .team-member {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
+    padding: 16px;
+    background: #fafafa;
+    border-radius: 12px;
+    transition: all 0.3s;
   }
 
-  .feature-list li:last-child {
-    border-bottom: none;
+  .team-member:hover {
+    background: #f5f5f5;
+    transform: translateX(4px);
   }
 
-  .feature-icon {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  .member-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--accent) 0%, #e6c200 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-dark);
     flex-shrink: 0;
+  }
+
+  .member-info {
+    flex: 1;
+  }
+
+  .member-name {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .member-role {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .member-stats {
+    text-align: right;
+  }
+
+  .member-stats .number {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .member-stats .label {
+    font-size: 11px;
+    color: var(--text-secondary);
   }
 
   /* ===== Footer Navigation ===== */
@@ -242,12 +303,11 @@
     justify-content: center;
     padding: 14px 8px;
     text-decoration: none;
-    color: var(--primary);
+    color: var(--text-secondary);
     transition: all 0.3s ease;
     position: relative;
     cursor: pointer;
     height: 100%;
-    background: rgba(200, 16, 46, 0.04);
   }
 
   .nav-link::before {
@@ -256,14 +316,29 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+    transition: width 0.3s ease;
     border-radius: 0 0 3px 3px;
   }
 
   .nav-link:hover {
-    background: rgba(200, 16, 46, 0.08);
+    background: rgba(200, 16, 46, 0.04);
+    color: var(--primary);
+  }
+
+  .nav-link:hover::before {
+    width: 60%;
+  }
+
+  .nav-link.active {
+    color: var(--primary);
+    background: rgba(200, 16, 46, 0.04);
+  }
+
+  .nav-link.active::before {
+    width: 80%;
   }
 
   .nav-icon {
@@ -332,6 +407,22 @@
       font-size: 22px;
     }
 
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-member {
+      flex-wrap: wrap;
+    }
+
+    .member-stats {
+      width: 100%;
+      text-align: left;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
     .footer-nav {
       justify-content: space-between;
       padding: 0 4px;
@@ -384,31 +475,91 @@
   <!-- Main Content -->
   <main class="main">
     <div class="content-area">
-      <h1 class="page-title">首页</h1>
+      <h1 class="page-title">团队明细</h1>
       <div class="page-content">
-        <h2>欢迎使用数字人民币推广平台</h2>
-        <p>数字人民币（e-CNY）是由中国人民银行发行的数字形式法定货币，具有国家信用支撑，是数字化时代的重要金融基础设施。</p>
-        <p>本平台致力于推动数字人民币的普及与应用，为用户提供便捷、安全、普惠的数字支付服务。</p>
+        <p>以下是推广团队的核心成员信息及业绩统计：</p>
 
-        <h2>平台优势</h2>
-        <ul class="feature-list">
-          <li>
-            <span class="feature-icon">¥</span>
-            <span>法定货币 - 国家信用背书，安全可靠</span>
-          </li>
-          <li>
-            <span class="feature-icon">⚡</span>
-            <span>双离线支付 - 无网络也能完成交易</span>
-          </li>
-          <li>
-            <span class="feature-icon">0</span>
-            <span>零手续费 - 转账消费全免费</span>
-          </li>
-          <li>
-            <span class="feature-icon">🔒</span>
-            <span>安全可控 - 多重加密保障资金安全</span>
-          </li>
-        </ul>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">128</div>
+            <div class="stat-label">团队总人数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5,680</div>
+            <div class="stat-label">累计推广用户</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">89%</div>
+            <div class="stat-label">任务完成率</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">¥328K</div>
+            <div class="stat-label">累计佣金</div>
+          </div>
+        </div>
+
+        <h2>核心成员</h2>
+        <div class="team-list">
+          <div class="team-member">
+            <div class="member-avatar">张</div>
+            <div class="member-info">
+              <div class="member-name">张明</div>
+              <div class="member-role">团队负责人</div>
+            </div>
+            <div class="member-stats">
+              <div class="number">1,256</div>
+              <div class="label">推广人数</div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-avatar">李</div>
+            <div class="member-info">
+              <div class="member-name">李华</div>
+              <div class="member-role">推广主管</div>
+            </div>
+            <div class="member-stats">
+              <div class="number">892</div>
+              <div class="label">推广人数</div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-avatar">王</div>
+            <div class="member-info">
+              <div class="member-name">王芳</div>
+              <div class="member-role">推广主管</div>
+            </div>
+            <div class="member-stats">
+              <div class="number">756</div>
+              <div class="label">推广人数</div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-avatar">陈</div>
+            <div class="member-info">
+              <div class="member-name">陈强</div>
+              <div class="member-role">高级推广员</div>
+            </div>
+            <div class="member-stats">
+              <div class="number">534</div>
+              <div class="label">推广人数</div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-avatar">刘</div>
+            <div class="member-info">
+              <div class="member-name">刘洋</div>
+              <div class="member-role">高级推广员</div>
+            </div>
+            <div class="member-stats">
+              <div class="number">489</div>
+              <div class="label">推广人数</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -437,7 +588,7 @@
         </span>
         <span class="nav-label">推广制度</span>
       </a>
-      <a href="team.html" class="nav-link">
+      <a href="team.html" class="nav-link active">
         <span class="nav-icon">
           <svg viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>

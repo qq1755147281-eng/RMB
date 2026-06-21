@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>首页 - 数字人民币推广落地开启</title>
+<title>推广制度 - 数字人民币推广落地开启</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
@@ -182,34 +182,48 @@
     margin-bottom: 16px;
   }
 
-  .feature-list {
-    list-style: none;
-    padding: 0;
+  .rule-list {
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
   }
 
-  .feature-list li {
-    padding: 12px 0;
+  .rule-item {
+    padding: 16px 0;
     border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 12px;
   }
 
-  .feature-list li:last-child {
+  .rule-item:last-child {
     border-bottom: none;
+    padding-bottom: 0;
   }
 
-  .feature-icon {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    border-radius: 50%;
+  .rule-item:first-child {
+    padding-top: 0;
+  }
+
+  .rule-title {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    flex-shrink: 0;
+    gap: 8px;
+  }
+
+  .rule-title::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+  }
+
+  .rule-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding-left: 16px;
   }
 
   /* ===== Footer Navigation ===== */
@@ -242,12 +256,11 @@
     justify-content: center;
     padding: 14px 8px;
     text-decoration: none;
-    color: var(--primary);
+    color: var(--text-secondary);
     transition: all 0.3s ease;
     position: relative;
     cursor: pointer;
     height: 100%;
-    background: rgba(200, 16, 46, 0.04);
   }
 
   .nav-link::before {
@@ -256,14 +269,29 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+    transition: width 0.3s ease;
     border-radius: 0 0 3px 3px;
   }
 
   .nav-link:hover {
-    background: rgba(200, 16, 46, 0.08);
+    background: rgba(200, 16, 46, 0.04);
+    color: var(--primary);
+  }
+
+  .nav-link:hover::before {
+    width: 60%;
+  }
+
+  .nav-link.active {
+    color: var(--primary);
+    background: rgba(200, 16, 46, 0.04);
+  }
+
+  .nav-link.active::before {
+    width: 80%;
   }
 
   .nav-icon {
@@ -384,31 +412,36 @@
   <!-- Main Content -->
   <main class="main">
     <div class="content-area">
-      <h1 class="page-title">首页</h1>
+      <h1 class="page-title">推广制度</h1>
       <div class="page-content">
-        <h2>欢迎使用数字人民币推广平台</h2>
-        <p>数字人民币（e-CNY）是由中国人民银行发行的数字形式法定货币，具有国家信用支撑，是数字化时代的重要金融基础设施。</p>
-        <p>本平台致力于推动数字人民币的普及与应用，为用户提供便捷、安全、普惠的数字支付服务。</p>
+        <h2>推广规则</h2>
+        <p>为规范数字人民币推广工作，确保推广活动有序进行，特制定以下推广制度：</p>
 
-        <h2>平台优势</h2>
-        <ul class="feature-list">
-          <li>
-            <span class="feature-icon">¥</span>
-            <span>法定货币 - 国家信用背书，安全可靠</span>
-          </li>
-          <li>
-            <span class="feature-icon">⚡</span>
-            <span>双离线支付 - 无网络也能完成交易</span>
-          </li>
-          <li>
-            <span class="feature-icon">0</span>
-            <span>零手续费 - 转账消费全免费</span>
-          </li>
-          <li>
-            <span class="feature-icon">🔒</span>
-            <span>安全可控 - 多重加密保障资金安全</span>
-          </li>
-        </ul>
+        <div class="rule-list">
+          <div class="rule-item">
+            <div class="rule-title">第一章 总则</div>
+            <div class="rule-desc">本制度适用于所有数字人民币推广人员及合作机构，旨在保障推广活动合法合规进行。</div>
+          </div>
+          <div class="rule-item">
+            <div class="rule-title">第二章 推广资格</div>
+            <div class="rule-desc">推广人员需年满18周岁，完成实名认证并签署推广协议后方可开展推广工作。</div>
+          </div>
+          <div class="rule-item">
+            <div class="rule-title">第三章 推广方式</div>
+            <div class="rule-desc">推广方式包括线上推广和线下推广两种形式，推广人员应按照规定的方式开展活动。</div>
+          </div>
+          <div class="rule-item">
+            <div class="rule-title">第四章 激励机制</div>
+            <div class="rule-desc">根据推广效果给予相应奖励，奖励标准根据推广数量和质量进行综合评定。</div>
+          </div>
+          <div class="rule-item">
+            <div class="rule-title">第五章 违规处理</div>
+            <div class="rule-desc">对违反推广制度的人员，将根据情节轻重给予警告、暂停推广资格或取消推广资格等处理。</div>
+          </div>
+        </div>
+
+        <h2>注意事项</h2>
+        <p>推广人员应遵守国家法律法规，不得进行虚假宣传，不得诱导用户进行非法交易，一经发现将严肃处理。</p>
       </div>
     </div>
   </main>
@@ -425,7 +458,7 @@
         </span>
         <span class="nav-label">首页</span>
       </a>
-      <a href="promotion.html" class="nav-link">
+      <a href="promotion.html" class="nav-link active">
         <span class="nav-icon">
           <svg viewBox="0 0 24 24">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
