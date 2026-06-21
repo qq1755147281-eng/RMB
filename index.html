@@ -1117,7 +1117,8 @@
     color: #ffffff;
     font-weight: 600;
     padding: 10px 4px;
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
     white-space: nowrap;
     font-size: 12px;
     letter-spacing: 0.3px;
@@ -1125,7 +1126,7 @@
 
   .team-table th:first-child {
     border-radius: 10px 0 0 0;
-    width: 40px;
+    width: 36px;
   }
 
   .team-table th:nth-child(2) {
@@ -1137,11 +1138,11 @@
   }
 
   .team-table th:nth-child(4) {
-    width: 48px;
+    width: 42px;
   }
 
   .team-table th:nth-child(5) {
-    width: 52px;
+    width: 48px;
   }
 
   .team-table th:last-child {
@@ -1149,8 +1150,9 @@
   }
 
   .team-table td {
-    padding: 8px 2px;
-    text-align: center;
+    padding: 8px 4px;
+    padding-left: 10px;
+    text-align: left;
     border-bottom: 1px solid var(--border);
     color: var(--text);
     white-space: nowrap;
@@ -1193,14 +1195,14 @@
   }
 
   .team-table .address-cell {
-    text-align: center;
+    text-align: left;
     color: var(--text-secondary);
     font-size: 12px;
   }
 
   .team-table .remark-cell {
     color: var(--text-secondary);
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .team-table .remark-cell.pending {
@@ -1209,14 +1211,14 @@
   }
 
   .team-table .status-cell {
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 4px;
+    font-weight: 500;
+    padding: 2px 5px;
+    border-radius: 3px;
     display: inline-block;
-    min-width: 40px;
+    font-size: 11px;
+    min-width: 34px;
     background: rgba(34, 197, 94, 0.15);
     color: #16a34a;
-    font-size: 11px;
   }
 
   .team-stats-row {
@@ -1436,12 +1438,15 @@
     .team-table th,
     .team-table td {
       padding: 7px 3px;
+      padding-left: 8px;
       font-size: 11px;
+      text-align: left;
     }
 
     .team-table th {
       font-size: 11px;
       padding: 9px 4px;
+      padding-left: 8px;
     }
 
     .team-table .address-cell {
@@ -1449,13 +1454,13 @@
     }
 
     .team-table .remark-cell {
-      font-size: 10px;
+      font-size: 11px;
     }
 
     .team-table .status-cell {
       font-size: 10px;
-      padding: 2px 6px;
-      min-width: 34px;
+      padding: 1px 4px;
+      min-width: 28px;
     }
 
     .team-table .seq-cell,
@@ -1832,111 +1837,111 @@
                   <th>序号</th>
                   <th>姓名</th>
                   <th>身份</th>
-                  <th>原址</th>
                   <th>状态</th>
+                  <th>原址</th>
                   <th>备注</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td class="seq-cell">1</td><td class="name-cell">张伟</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/A/zw/abc</td></tr>
-                <tr><td class="seq-cell">2</td><td class="name-cell">李明</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/B/lm/def</td></tr>
-                <tr><td class="seq-cell">3</td><td class="name-cell">王芳</td><td class="role-cell">推广员</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/C/wf/ghi</td></tr>
-                <tr><td class="seq-cell">4</td><td class="name-cell">刘洋</td><td class="role-cell">推广员</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/D/ly/jkl</td></tr>
-                <tr><td class="seq-cell">5</td><td class="name-cell">陈强</td><td class="role-cell">推广员</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/E/cq/mno</td></tr>
-                <tr><td class="seq-cell">6</td><td class="name-cell">赵敏</td><td class="role-cell">推广员</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/F/zm/pqr</td></tr>
-                <tr><td class="seq-cell">7</td><td class="name-cell">钱伟</td><td class="role-cell">推广员</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/G/qw/stu</td></tr>
-                <tr><td class="seq-cell">8</td><td class="name-cell">孙丽</td><td class="role-cell">推广员</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/H/sl/vwx</td></tr>
-                <tr><td class="seq-cell">9</td><td class="name-cell">周杰</td><td class="role-cell">推广员</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/I/zj/yza</td></tr>
-                <tr><td class="seq-cell">10</td><td class="name-cell">吴婷</td><td class="role-cell">推广员</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">/J/wt/bcd</td></tr>
-                <tr><td class="seq-cell">11</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">12</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">13</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">14</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">15</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">16</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">17</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">18</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">19</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">20</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">21</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">22</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">23</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">24</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">25</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">26</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">27</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">28</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">29</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">30</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">31</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">32</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">33</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">34</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">35</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">36</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">37</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">38</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">39</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">40</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">41</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">42</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">43</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">44</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">45</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">46</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">47</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">48</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">49</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">50</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">51</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">52</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">53</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">54</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">55</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">56</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">57</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">58</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">59</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">60</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">61</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">62</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">63</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">64</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">65</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">66</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">67</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">68</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">69</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">70</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">71</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">72</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">73</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">74</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">75</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">76</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">77</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">78</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">79</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">80</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">81</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">82</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">83</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">84</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">85</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">86</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">87</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">88</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">89</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">90</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">91</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">92</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">93</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">94</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">95</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">96</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">97</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">98</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">99</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="address-cell">省份</td><td class="status-cell">正常</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">1</td><td class="name-cell">张伟</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/A/zw/abc</td></tr>
+                <tr><td class="seq-cell">2</td><td class="name-cell">李明</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/B/lm/def</td></tr>
+                <tr><td class="seq-cell">3</td><td class="name-cell">王芳</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/C/wf/ghi</td></tr>
+                <tr><td class="seq-cell">4</td><td class="name-cell">刘洋</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/D/ly/jkl</td></tr>
+                <tr><td class="seq-cell">5</td><td class="name-cell">陈强</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/E/cq/mno</td></tr>
+                <tr><td class="seq-cell">6</td><td class="name-cell">赵敏</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/F/zm/pqr</td></tr>
+                <tr><td class="seq-cell">7</td><td class="name-cell">钱伟</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/G/qw/stu</td></tr>
+                <tr><td class="seq-cell">8</td><td class="name-cell">孙丽</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/H/sl/vwx</td></tr>
+                <tr><td class="seq-cell">9</td><td class="name-cell">周杰</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/I/zj/yza</td></tr>
+                <tr><td class="seq-cell">10</td><td class="name-cell">吴婷</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/J/wt/bcd</td></tr>
+                <tr><td class="seq-cell">11</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">12</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">13</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">14</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">15</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">16</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">17</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">18</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">19</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">20</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">21</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">22</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">23</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">24</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">25</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">26</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">27</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">28</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">29</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">30</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">31</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">32</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">33</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">34</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">35</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">36</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">37</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">38</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">39</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">40</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">41</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">42</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">43</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">44</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">45</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">46</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">47</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">48</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">49</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">50</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">51</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">52</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">53</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">54</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">55</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">56</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">57</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">58</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">59</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">60</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">61</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">62</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">63</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">64</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">65</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">66</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">67</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">68</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">69</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">70</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">71</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">72</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">73</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">74</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">75</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">76</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">77</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">78</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">79</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">80</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">81</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">82</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">83</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">84</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">85</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">86</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">87</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">88</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">89</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">90</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">91</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">92</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">93</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">94</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">95</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">96</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">97</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">98</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">99</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
               </tbody>
             </table>
           </div>
