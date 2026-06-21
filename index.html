@@ -1096,16 +1096,17 @@
   /* ===== Team - Table ===== */
   .team-table-wrapper {
     overflow-x: auto;
-    margin: 16px 0;
-    border-radius: 10px;
+    margin: 20px 0;
+    border-radius: 12px;
     border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   }
 
   .team-table {
     width: 100%;
-    min-width: 720px;
+    min-width: 900px;
     border-collapse: collapse;
-    font-size: 14px;
+    font-size: 15px;
     background: #ffffff;
     table-layout: fixed;
   }
@@ -1114,46 +1115,47 @@
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: #ffffff;
     font-weight: 600;
-    padding: 14px 12px;
+    padding: 16px 14px;
     text-align: center;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.5px;
   }
 
   .team-table th:first-child {
-    border-radius: 10px 0 0 0;
-    width: 80px;
+    border-radius: 12px 0 0 0;
+    width: 90px;
   }
 
   .team-table th:nth-child(2) {
-    width: 120px;
-  }
-
-  .team-table th:nth-child(3) {
-    width: 130px;
-  }
-
-  .team-table th:nth-child(4) {
     width: 140px;
   }
 
+  .team-table th:nth-child(3) {
+    width: 170px;
+  }
+
+  .team-table th:nth-child(4) {
+    width: 170px;
+  }
+
   .team-table th:nth-child(5) {
-    width: 110px;
+    width: 120px;
   }
 
   .team-table th:last-child {
-    border-radius: 0 10px 0 0;
+    border-radius: 0 12px 0 0;
   }
 
   .team-table td {
-    padding: 12px;
+    padding: 14px;
     text-align: center;
     border-bottom: 1px solid var(--border);
     color: var(--text);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 14px;
   }
 
   .team-table tr:last-child td {
@@ -1161,11 +1163,11 @@
   }
 
   .team-table tr:last-child td:first-child {
-    border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 12px;
   }
 
   .team-table tr:last-child td:last-child {
-    border-radius: 0 0 10px 0;
+    border-radius: 0 0 12px 0;
   }
 
   .team-table tr:hover td {
@@ -1173,42 +1175,47 @@
   }
 
   .team-table .seq-cell {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary);
+    font-size: 15px;
   }
 
   .team-table .name-cell {
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 15px;
   }
 
   .team-table .role-cell {
     color: var(--primary);
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 14px;
   }
 
   .team-table .address-cell {
     text-align: center;
     color: var(--text-secondary);
+    font-size: 14px;
   }
 
   .team-table .remark-cell {
     color: var(--text-secondary);
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .team-table .remark-cell.pending {
     color: #f59e0b;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .team-table .status-cell {
     font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 4px;
+    padding: 6px 14px;
+    border-radius: 6px;
     display: inline-block;
-    min-width: 60px;
+    min-width: 70px;
     background: rgba(34, 197, 94, 0.15);
     color: #16a34a;
+    font-size: 14px;
   }
 
   .team-stats-row {
@@ -1400,12 +1407,12 @@
     }
 
     .team-table-wrapper {
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .team-table th,
     .team-table td {
-      padding: 10px 8px;
+      padding: 12px 8px;
     }
 
     .team-table .address-cell {
