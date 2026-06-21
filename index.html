@@ -991,6 +991,29 @@
     font-weight: 500;
   }
 
+  .team-table .status-cell {
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 50px;
+  }
+
+  .team-table .status-normal {
+    background: rgba(34, 197, 94, 0.15);
+    color: #16a34a;
+  }
+
+  .team-table .status-cancel {
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+  }
+
+  .team-table .status-bye {
+    background: rgba(245, 158, 11, 0.15);
+    color: #d97706;
+  }
+
   .team-stats-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1557,61 +1580,62 @@
                   <th>序号</th>
                   <th>姓名</th>
                   <th>身份</th>
-                  <th>户籍地址</th>
+                  <th>原址</th>
+                  <th>状态</th>
                   <th>备注</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td class="seq-cell">1</td><td class="name-cell">张明</td><td class="role-cell">团队负责人</td><td class="address-cell">浙江省杭州市西湖区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">2</td><td class="name-cell">李华</td><td class="role-cell">推广主管</td><td class="address-cell">浙江省宁波市鄞州区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">3</td><td class="name-cell">王芳</td><td class="role-cell">推广主管</td><td class="address-cell">浙江省温州市鹿城区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">4</td><td class="name-cell">陈强</td><td class="role-cell">高级推广员</td><td class="address-cell">浙江省嘉兴市南湖区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">5</td><td class="name-cell">刘洋</td><td class="role-cell">高级推广员</td><td class="address-cell">浙江省湖州市吴兴区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">6</td><td class="name-cell">赵敏</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市越城区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">7</td><td class="name-cell">钱伟</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市婺城区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">8</td><td class="name-cell">孙丽</td><td class="role-cell">推广员</td><td class="address-cell">浙江省衢州市柯城区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">9</td><td class="name-cell">周杰</td><td class="role-cell">推广员</td><td class="address-cell">浙江省舟山市定海区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">10</td><td class="name-cell">吴婷</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市椒江区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">11</td><td class="name-cell">郑浩</td><td class="role-cell">推广员</td><td class="address-cell">浙江省丽水市莲都区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">12</td><td class="name-cell">王磊</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市海曙区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">13</td><td class="name-cell">冯雪</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市拱墅区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">14</td><td class="name-cell">陈晨</td><td class="role-cell">推广员</td><td class="address-cell">浙江省温州市龙湾区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">15</td><td class="name-cell">褚斌</td><td class="role-cell">推广员</td><td class="address-cell">浙江省嘉兴市秀洲区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">16</td><td class="name-cell">卫亮</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市上虞区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">17</td><td class="name-cell">蒋俊</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市金东区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">18</td><td class="name-cell">沈娟</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市路桥区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">19</td><td class="name-cell">韩梅</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市镇海区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">20</td><td class="name-cell">杨涛</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市萧山区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">21</td><td class="name-cell">朱琳</td><td class="role-cell">推广员</td><td class="address-cell">浙江省温州市瓯海区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">22</td><td class="name-cell">秦峰</td><td class="role-cell">推广员</td><td class="address-cell">浙江省湖州市南浔区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">23</td><td class="name-cell">尤佳</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市柯桥区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">24</td><td class="name-cell">许刚</td><td class="role-cell">推广员</td><td class="address-cell">浙江省衢州市江山市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">25</td><td class="name-cell">何军</td><td class="role-cell">推广员</td><td class="address-cell">浙江省舟山市普陀区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">26</td><td class="name-cell">吕婷</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市温岭市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">27</td><td class="name-cell">施伟</td><td class="role-cell">推广员</td><td class="address-cell">浙江省丽水市青田县</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">28</td><td class="name-cell">张健</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市北仑区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">29</td><td class="name-cell">孔梅</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市余杭区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">30</td><td class="name-cell">曹鹏</td><td class="role-cell">推广员</td><td class="address-cell">浙江省温州市瑞安市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">31</td><td class="name-cell">严琳</td><td class="role-cell">推广员</td><td class="address-cell">浙江省嘉兴市嘉善县</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">32</td><td class="name-cell">华强</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市诸暨市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">33</td><td class="name-cell">金磊</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市义乌市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">34</td><td class="name-cell">魏芳</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市玉环市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">35</td><td class="name-cell">陶杰</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市慈溪市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">36</td><td class="name-cell">姜涛</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市临平区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">37</td><td class="name-cell">戚丽</td><td class="role-cell">推广员</td><td class="address-cell">浙江省温州市乐清市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">38</td><td class="name-cell">谢军</td><td class="role-cell">推广员</td><td class="address-cell">浙江省湖州市德清县</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">39</td><td class="name-cell">邹敏</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市新昌县</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">40</td><td class="name-cell">柏峰</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市永康市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">41</td><td class="name-cell">水红</td><td class="role-cell">推广员</td><td class="address-cell">浙江省衢州市龙游县</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">42</td><td class="name-cell">窦刚</td><td class="role-cell">推广员</td><td class="address-cell">浙江省舟山市岱山县</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">43</td><td class="name-cell">章婷</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市三门县</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">44</td><td class="name-cell">云涛</td><td class="role-cell">推广员</td><td class="address-cell">浙江省丽水市缙云县</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">45</td><td class="name-cell">苏梅</td><td class="role-cell">推广员</td><td class="address-cell">浙江省宁波市余姚市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">46</td><td class="name-cell">潘林</td><td class="role-cell">推广员</td><td class="address-cell">浙江省杭州市富阳区</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">47</td><td class="name-cell">葛伟</td><td class="role-cell">推广员</td><td class="address-cell">浙江省嘉兴市海宁市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">48</td><td class="name-cell">奚丽</td><td class="role-cell">推广员</td><td class="address-cell">浙江省绍兴市嵊州市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">49</td><td class="name-cell">范健</td><td class="role-cell">推广员</td><td class="address-cell">浙江省金华市东阳市</td><td class="remark-cell pending">待定</td></tr>
-                <tr><td class="seq-cell">50</td><td class="name-cell">彭勇</td><td class="role-cell">推广员</td><td class="address-cell">浙江省台州市临海市</td><td class="remark-cell pending">待定</td></tr>
+                <tr><td class="seq-cell">1</td><td class="name-cell">审核</td><td class="role-cell">团队负责人</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">W/zjb/ywn</td></tr>
+                <tr><td class="seq-cell">2</td><td class="name-cell">审核</td><td class="role-cell">推广主管</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">X/hqd/nbf</td></tr>
+                <tr><td class="seq-cell">3</td><td class="name-cell">审核</td><td class="role-cell">推广主管</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">Y/kjd/rts</td></tr>
+                <tr><td class="seq-cell">4</td><td class="name-cell">审核</td><td class="role-cell">高级推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">Z/mnx/lwq</td></tr>
+                <tr><td class="seq-cell">5</td><td class="name-cell">审核</td><td class="role-cell">高级推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">A/qwe/ert</td></tr>
+                <tr><td class="seq-cell">6</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">B/asd/zxc</td></tr>
+                <tr><td class="seq-cell">7</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">C/vbn/mkl</td></tr>
+                <tr><td class="seq-cell">8</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">D/fgh/qaz</td></tr>
+                <tr><td class="seq-cell">9</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">E/wer/sxc</td></tr>
+                <tr><td class="seq-cell">10</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">F/eds/rtf</td></tr>
+                <tr><td class="seq-cell">11</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">G/jkl/uyt</td></tr>
+                <tr><td class="seq-cell">12</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">H/mnb/vfr</td></tr>
+                <tr><td class="seq-cell">13</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">I/bnm/nhy</td></tr>
+                <tr><td class="seq-cell">14</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">J/cxz/bgt</td></tr>
+                <tr><td class="seq-cell">15</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">K/lkm/juh</td></tr>
+                <tr><td class="seq-cell">16</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">L/pok/mji</td></tr>
+                <tr><td class="seq-cell">17</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">M/nht/gfr</td></tr>
+                <tr><td class="seq-cell">18</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">N/bvc/dft</td></tr>
+                <tr><td class="seq-cell">19</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">O/qwe/rty</td></tr>
+                <tr><td class="seq-cell">20</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">P/dfg/uio</td></tr>
+                <tr><td class="seq-cell">21</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">Q/ghj/hjk</td></tr>
+                <tr><td class="seq-cell">22</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">R/lkl/lpo</td></tr>
+                <tr><td class="seq-cell">23</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">S/zxc/vbn</td></tr>
+                <tr><td class="seq-cell">24</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">T/wer/asd</td></tr>
+                <tr><td class="seq-cell">25</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">U/fgh/jkl</td></tr>
+                <tr><td class="seq-cell">26</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">V/qaz/wsx</td></tr>
+                <tr><td class="seq-cell">27</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">W/edc/rfv</td></tr>
+                <tr><td class="seq-cell">28</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">X/tgb/yhn</td></tr>
+                <tr><td class="seq-cell">29</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">Y/ujm/ikl</td></tr>
+                <tr><td class="seq-cell">30</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">Z/olp/pqr</td></tr>
+                <tr><td class="seq-cell">31</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">A/sdf/dfg</td></tr>
+                <tr><td class="seq-cell">32</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">B/ghj/hjk</td></tr>
+                <tr><td class="seq-cell">33</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">C/lkl/mnb</td></tr>
+                <tr><td class="seq-cell">34</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">D/zxc/vbn</td></tr>
+                <tr><td class="seq-cell">35</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">E/wer/ert</td></tr>
+                <tr><td class="seq-cell">36</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">F/rty/tyu</td></tr>
+                <tr><td class="seq-cell">37</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">G/uio/uop</td></tr>
+                <tr><td class="seq-cell">38</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">H/qwe/ewq</td></tr>
+                <tr><td class="seq-cell">39</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">I/asd/dsa</td></tr>
+                <tr><td class="seq-cell">40</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">J/zxc/cxz</td></tr>
+                <tr><td class="seq-cell">41</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">K/fgh/hgf</td></tr>
+                <tr><td class="seq-cell">42</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">L/vbn/bnm</td></tr>
+                <tr><td class="seq-cell">43</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">M/wer/rew</td></tr>
+                <tr><td class="seq-cell">44</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">N/tyt/tyt</td></tr>
+                <tr><td class="seq-cell">45</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">O/uio/oiu</td></tr>
+                <tr><td class="seq-cell">46</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">P/pop/opo</td></tr>
+                <tr><td class="seq-cell">47</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-bye">再见</td><td class="remark-cell">Q/lpl/plp</td></tr>
+                <tr><td class="seq-cell">48</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">R/qlq/lql</td></tr>
+                <tr><td class="seq-cell">49</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-cancel">注销</td><td class="remark-cell">S/zlz/lzl</td></tr>
+                <tr><td class="seq-cell">50</td><td class="name-cell">审核</td><td class="role-cell">推广员</td><td class="address-cell">浙江省</td><td class="status-cell status-normal">正常</td><td class="remark-cell">T/xlx/lxl</td></tr>
               </tbody>
             </table>
           </div>
