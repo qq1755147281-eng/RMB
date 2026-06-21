@@ -386,6 +386,270 @@
     padding-left: 16px;
   }
 
+  /* ===== Reward Selection ===== */
+  .reward-section {
+    margin-top: 24px;
+  }
+
+  .reward-section h2 {
+    font-family: "Noto Serif SC", serif;
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .reward-section p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .reward-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .reward-card {
+    position: relative;
+    background: #ffffff;
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .reward-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px rgba(200, 16, 46, 0.08);
+  }
+
+  .reward-card.selected {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, rgba(200, 16, 46, 0.05) 0%, rgba(255, 209, 0, 0.05) 100%);
+  }
+
+  .reward-card.selected::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
+  }
+
+  .reward-radio {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .reward-card.selected .reward-radio {
+    border-color: var(--primary);
+    background: var(--primary);
+  }
+
+  .reward-radio::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .reward-card.selected .reward-radio::after {
+    background: #ffffff;
+  }
+
+  .reward-card input[type="radio"] {
+    display: none;
+  }
+
+  .reward-header {
+    margin-bottom: 16px;
+  }
+
+  .reward-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+
+  .reward-icon.cash {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #ffffff;
+  }
+
+  .reward-icon.personal {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+  }
+
+  .reward-icon.team {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+  }
+
+  .reward-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .reward-subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .reward-benefits {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+
+  .reward-benefits h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .reward-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .reward-benefits li {
+    padding: 8px 0;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    position: relative;
+    padding-left: 16px;
+  }
+
+  .reward-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .reward-rate {
+    margin-top: 12px;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+  }
+
+  .reward-rate-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .rate-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 12.5px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .rate-item:last-child {
+    border-bottom: none;
+  }
+
+  .rate-label {
+    color: var(--text-secondary);
+  }
+
+  .rate-value {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  /* ===== Material Rules ===== */
+  .material-rules {
+    margin-top: 24px;
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .material-rules h3 {
+    font-family: "Noto Serif SC", serif;
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .material-section {
+    margin-bottom: 20px;
+  }
+
+  .material-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .material-section h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .material-section p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+
+  .material-section ul {
+    list-style: none;
+    padding-left: 16px;
+  }
+
+  .material-section li {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding: 4px 0;
+    position: relative;
+  }
+
+  .material-section li::before {
+    content: "•";
+    position: absolute;
+    left: -12px;
+    color: var(--primary);
+  }
+
   /* ===== Team - Stats & Members ===== */
   .stats-grid {
     display: grid;
@@ -964,8 +1228,148 @@
             </div>
           </div>
 
-          <h2>注意事项</h2>
-          <p>推广人员应遵守国家法律法规，不得进行虚假宣传，不得诱导用户进行非法交易，一经发现将严肃处理。</p>
+          <div class="reward-section">
+            <h2>奖励结算方式选择</h2>
+            <p>奖励规则公开透明，推广人员需选择以下三种结算方式中的任意一种，不可多选：</p>
+
+            <div class="reward-cards">
+              <div class="reward-card" data-reward="cash" onclick="selectReward('cash')">
+                <input type="radio" name="reward-type" id="reward-cash">
+                <div class="reward-radio"></div>
+                <div class="reward-header">
+                  <div class="reward-icon cash">💰</div>
+                  <div class="reward-title">现金奖励</div>
+                  <div class="reward-subtitle">每推广一个商家码牌奖励 100 元</div>
+                </div>
+                <div class="reward-benefits">
+                  <h4>奖励规则</h4>
+                  <ul>
+                    <li>每推广一个商家码牌成功，奖励 100 元整</li>
+                    <li>薪资每月一结，特殊情况 15 天一结</li>
+                    <li>检测为无效商家/无效支付流水后，不发放奖励</li>
+                    <li>结算方式简单直接，快速到账</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="reward-card" data-reward="personal" onclick="selectReward('personal')">
+                <input type="radio" name="reward-type" id="reward-personal">
+                <div class="reward-radio"></div>
+                <div class="reward-header">
+                  <div class="reward-icon personal">👤</div>
+                  <div class="reward-title">推广人奖励</div>
+                  <div class="reward-subtitle">按支付流水比例分红</div>
+                </div>
+                <div class="reward-benefits">
+                  <h4>奖励规则</h4>
+                  <ul>
+                    <li>申请业务员后台，申请码牌推广真实商家</li>
+                    <li>系统自动记录商家支付流水数据</li>
+                    <li>每月分红流水次月可申请随时提现</li>
+                  </ul>
+                  <div class="reward-rate">
+                    <div class="reward-rate-title">分红流水比例</div>
+                    <div class="rate-item">
+                      <span class="rate-label">普通支付</span>
+                      <span class="rate-value">万分之二</span>
+                    </div>
+                    <div class="rate-item">
+                      <span class="rate-label">数币支付</span>
+                      <span class="rate-value">千分之一</span>
+                    </div>
+                    <div class="rate-item">
+                      <span class="rate-label">先享后付</span>
+                      <span class="rate-value">0.6%</span>
+                    </div>
+                    <div class="rate-item">
+                      <span class="rate-label">下级业务员分红</span>
+                      <span class="rate-value">其分红的 0.5/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reward-card" data-reward="team" onclick="selectReward('team')">
+                <input type="radio" name="reward-type" id="reward-team">
+                <div class="reward-radio"></div>
+                <div class="reward-header">
+                  <div class="reward-icon team">👥</div>
+                  <div class="reward-title">推广团队长奖励</div>
+                  <div class="reward-subtitle">团队收益 + 额外团队分红</div>
+                </div>
+                <div class="reward-benefits">
+                  <h4>奖励规则</h4>
+                  <ul>
+                    <li>享受个人分红比例基础上，增加团队分红</li>
+                    <li>团队长可申请开通团队业务员账号</li>
+                    <li>团队所有人账号推广的商家支付流水均享受额外 10% 分红</li>
+                    <li>团队分红每月单独发放，可随时查看并申请提现</li>
+                  </ul>
+                  <div class="reward-rate">
+                    <div class="reward-rate-title">团队长分红流水比例</div>
+                    <div class="rate-item">
+                      <span class="rate-label">普通支付</span>
+                      <span class="rate-value">万分之 2.5</span>
+                    </div>
+                    <div class="rate-item">
+                      <span class="rate-label">数币支付</span>
+                      <span class="rate-value">千分之 1.2</span>
+                    </div>
+                    <div class="rate-item">
+                      <span class="rate-label">先享后付</span>
+                      <span class="rate-value">0.8%</span>
+                    </div>
+                    <div class="rate-item">
+                      <span class="rate-label">团队成员分红提成</span>
+                      <span class="rate-value">每人分红的 1/10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-rules">
+            <h3>推广物料管理规则公告</h3>
+            
+            <div class="material-section">
+              <h4>一、物料保管管理规则</h4>
+              <p>所有推广物料由银联统一发放，归属官方所有。全体推广人员领用物料后，需妥善保管、规范存放。严禁遗失、严禁随意丢弃、严禁人为损伤、破坏物料，全程保障物料完整、整洁、可正常合规使用。</p>
+            </div>
+
+            <div class="material-section">
+              <h4>二、物料领用登记规则</h4>
+              <p>所有推广物料实行实名登记、一物一归属制度。任何推广员、业务员领用物料，必须统一提交申请并完成台账登记。所有物料归属以登记记录为准，谁领用、谁负责、谁承担全部管理责任，未登记物料禁止私自使用。</p>
+            </div>
+
+            <div class="material-section">
+              <h4>三、物料使用规范规则</h4>
+              <ul>
+                <li>所有银联推广物料仅可用于正规、合法的业务推广与宣传工作，一码绑定唯一商户。</li>
+                <li>全体推广人员禁止利用物料进行夸大宣传、虚假宣传，此物料仅作推广数字人民币码牌用途，不得私自作于其他无关用途。</li>
+                <li>禁止使用物料编造、提交虚假推广报告、虚假业务数据，一经发现将依规追责。</li>
+              </ul>
+            </div>
+
+            <div class="material-section">
+              <h4>四、物料退回归还规则</h4>
+              <p>所有推广业务员若终止推广工作、不再从事相关推广业务，必须将全部领用物料完整原样退回，统一寄回公司总部或当地指定服务商对应地址，按领用数量如数归还，不得私自留存、藏匿物料。</p>
+            </div>
+
+            <div class="material-section">
+              <h4>五、物料损坏丢失赔偿规则</h4>
+              <p>所有推广码牌、宣传物料等银联推广物资，均由领用人员全权负责保管。凡出现物料丢失、人为损坏、破损报废、私自丢弃等情况，一经核实，按照单件物料初步 500 元标准进行损失赔偿，所有赔偿责任由对应领用推广人员自行承担。如因此造成更大损失、经济利益的情况，推广人员根据相对应损失进行赔偿。</p>
+            </div>
+
+            <div class="material-section">
+              <h4>六、附则</h4>
+              <ul>
+                <li>本规则为全员通用公示制度，所有推广人员默认知晓并自愿遵守，无需单独签字，领用物料即视为认可本全部规则，请确认以上条例。本人已仔细阅读，并同意以上所有规则。</li>
+                <li>公告规则正式执行，所有物料管理、核查、追责、赔偿均以此规则为唯一标准。</li>
+                <li>公司有权随时对物料使用、留存、归还情况进行抽查核验，所有人员需积极配合。</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1225,6 +1629,24 @@
         });
       });
     })();
+
+    // 奖励选择功能 - 单选
+    function selectReward(rewardType) {
+      const rewardCards = document.querySelectorAll('.reward-card');
+      rewardCards.forEach(function(card) {
+        card.classList.remove('selected');
+      });
+
+      const selectedCard = document.querySelector('.reward-card[data-reward="' + rewardType + '"]');
+      if (selectedCard) {
+        selectedCard.classList.add('selected');
+      }
+
+      const radioInput = document.getElementById('reward-' + rewardType);
+      if (radioInput) {
+        radioInput.checked = true;
+      }
+    }
   </script>
 
 </body>
