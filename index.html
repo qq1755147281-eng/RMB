@@ -1893,7 +1893,7 @@
               <div class="region-section-title">
                 <span class="region-dot region-dot-green"></span>
                 <span>授权可推广区域</span>
-                <span class="region-count">约 20 个城市</span>
+                <span class="region-count">约 19 个城市</span>
               </div>
               <div class="region-tag-list">
                 <span class="region-tag region-tag-green">浙江宁波</span>
@@ -1904,9 +1904,8 @@
                 <span class="region-tag region-tag-green">上海</span>
                 <span class="region-tag region-tag-green">深圳</span>
                 <span class="region-tag region-tag-green">成都</span>
-                <span class="region-tag region-tag-green">苏州</span>
-                <span class="region-tag region-tag-green">雄安新区</span>
-                <span class="region-tag region-tag-green">河北</span>
+                <span class="region-tag region-tag-green tag-clickable">苏州</span>
+                <span class="region-tag region-tag-green tag-clickable">河北</span>
                 <span class="region-tag region-tag-green">海南</span>
                 <span class="region-tag region-tag-green">大连</span>
                 <span class="region-tag region-tag-green">青岛</span>
@@ -2014,7 +2013,7 @@
       } catch (e) {}
     }
 
-    // 为底部导航按钮、奖励卡片、服务热线按钮添加点击音效
+    // 为底部导航按钮、奖励卡片、服务热线、区域标签等可交互元素添加点击音效
     document.addEventListener('click', function(e) {
       var target = e.target;
       var isInteractive = false;
@@ -2023,6 +2022,9 @@
             target.classList.contains('nav-btn') ||
             target.classList.contains('reward-card') ||
             target.classList.contains('phone-breathe-wrapper') ||
+            target.classList.contains('region-tag') ||
+            target.classList.contains('tag-clickable') ||
+            target.classList.contains('tier-card') ||
             target.tagName === 'BUTTON' ||
             target.tagName === 'A'
           )) {
