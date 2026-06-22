@@ -948,6 +948,189 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   }
 
+  /* ===== Priority Section ===== */
+  .priority-section {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+    border: 2px solid #fecaca;
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .priority-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #fca5a5;
+  }
+
+  .priority-dot {
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+    animation: priorityPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes priorityPulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.5); }
+    50% { box-shadow: 0 0 16px rgba(239, 68, 68, 0.8); }
+  }
+
+  .priority-section-title h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #dc2626;
+  }
+
+  .priority-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .priority-tag {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(239, 68, 68, 0.08) 100%);
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .priority-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+  }
+
+  .red-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4);
+  }
+
+  .red-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(239, 68, 68, 0.5);
+  }
+
+  /* ===== Download Buttons ===== */
+  .download-section {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .download-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  .download-card.purple {
+    border-color: #a78bfa;
+    box-shadow: 0 4px 20px rgba(167, 139, 250, 0.15);
+  }
+
+  .download-card.yellow {
+    border-color: #facc15;
+    box-shadow: 0 4px 20px rgba(250, 204, 21, 0.15);
+  }
+
+  .download-btn {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .download-btn.purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+
+  .download-btn.purple:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .download-btn.yellow {
+    background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
+  }
+
+  .download-btn.yellow:hover {
+    box-shadow: 0 0 30px rgba(234, 179, 8, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .download-label {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  /* ===== Bottom Tip ===== */
+  .bottom-tip {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--border);
+    text-align: center;
+  }
+
+  .tip-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+
+  .tip-button {
+    padding: 12px 32px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .tip-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+  }
+
   .region-card-title {
     display: flex;
     align-items: center;
@@ -2036,6 +2219,34 @@
                 <span class="region-tag region-tag-green">上海市为推广优先级</span>
               </div>
             </div>
+          </div>
+
+          <div class="priority-section">
+            <div class="priority-section-title">
+              <span class="priority-dot"></span>
+              <h4>后续推广优先级</h4>
+            </div>
+            <div class="priority-tag-list">
+              <span class="priority-tag">北京市</span>
+              <span class="priority-tag">天津市</span>
+            </div>
+            <button class="red-button" onclick="playClickSound()">立即申请推广</button>
+          </div>
+
+          <div class="download-section">
+            <div class="download-card purple">
+              <button class="download-btn purple" onclick="playClickSound()">📥 推广员下载</button>
+              <div class="download-label">专为推广人员准备双后台</div>
+            </div>
+            <div class="download-card yellow">
+              <button class="download-btn yellow" onclick="playClickSound()">📥 商家下载</button>
+              <div class="download-label">专为商户下载后台</div>
+            </div>
+          </div>
+
+          <div class="bottom-tip">
+            <div class="tip-text">请按照您的需要和身份选择下载</div>
+            <button class="tip-button" onclick="playClickSound()">立即下载</button>
           </div>
         </div>
       </section>
