@@ -754,75 +754,75 @@
   .phone-breathe-container {
     display: flex;
     align-items: stretch;
-    gap: 10px;
-    margin-bottom: 12px;
+    gap: 8px;
+    margin-bottom: 10px;
   }
 
   .phone-breathe-wrapper {
     flex: 1;
     text-align: center;
-    padding: 12px 8px;
+    padding: 8px 6px;
     background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-    border-radius: 8px;
-    border: 1.5px solid #86efac;
+    border-radius: 6px;
+    border: 1px solid #86efac;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1px 4px rgba(34, 197, 94, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
     text-decoration: none;
   }
 
   .phone-breathe-wrapper:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6);
     border-color: #22c55e;
   }
 
   .phone-breathe-wrapper .phone-card-icon {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 6px;
-    box-shadow: 0 3px 10px rgba(34, 197, 94, 0.3);
+    margin-bottom: 4px;
+    box-shadow: 0 2px 6px rgba(34, 197, 94, 0.25);
   }
 
   .phone-breathe-wrapper .phone-card-icon svg {
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
   }
 
   .phone-breathe-label {
-    font-size: 11px;
+    font-size: 9px;
     color: #64748b;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     font-weight: 500;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
   }
 
   .phone-breathe-number {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
     color: #15803d;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     animation: breathe 2s ease-in-out infinite;
-    text-shadow: 0 0 6px rgba(34, 197, 94, 0.4), 0 0 12px rgba(34, 197, 94, 0.2);
+    text-shadow: 0 0 4px rgba(34, 197, 94, 0.3);
   }
 
   @keyframes breathe {
     0%, 100% {
       opacity: 1;
-      text-shadow: 0 0 8px rgba(34, 197, 94, 0.4), 0 0 16px rgba(34, 197, 94, 0.2);
+      text-shadow: 0 0 4px rgba(34, 197, 94, 0.3);
     }
     50% {
       opacity: 0.85;
-      text-shadow: 0 0 16px rgba(34, 197, 94, 0.7), 0 0 32px rgba(34, 197, 94, 0.4);
+      text-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
     }
   }
 
@@ -876,19 +876,19 @@
   }
 
   .info-section {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-    border-radius: 12px;
-    padding: 14px 16px;
-    border: 1px solid var(--border);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: none;
+    box-shadow: none;
   }
 
   .info-row {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border);
   }
 
   .info-row:last-child {
@@ -901,28 +901,29 @@
   }
 
   .info-icon {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
     color: #ffffff;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    border-radius: 8px;
+    border-radius: 6px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+    box-shadow: 0 1px 4px rgba(220, 38, 38, 0.2);
   }
 
   .info-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
   }
 
   .info-text {
     flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
   }
 
   .info-text strong {
@@ -948,6 +949,211 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   }
 
+  /* ===== Priority Section ===== */
+  .priority-section {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+    border: 2px solid #fecaca;
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .priority-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #fca5a5;
+  }
+
+  .priority-dot {
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+    animation: priorityPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes priorityPulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.5); }
+    50% { box-shadow: 0 0 16px rgba(239, 68, 68, 0.8); }
+  }
+
+  .priority-section-title h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #dc2626;
+  }
+
+  .priority-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .priority-tag {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(239, 68, 68, 0.08) 100%);
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .priority-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+  }
+
+  .red-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4);
+  }
+
+  .red-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(239, 68, 68, 0.5);
+  }
+
+  /* ===== Download Buttons - Floating Style ===== */
+  .download-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(8px);
+  }
+
+  .download-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    min-width: 160px;
+    width: 160px;
+    white-space: nowrap;
+  }
+
+  .download-btn.purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 12px rgba(139, 92, 246, 0.35);
+  }
+
+  .download-btn.purple:hover {
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .download-btn.yellow {
+    background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 12px rgba(234, 179, 8, 0.35);
+  }
+
+  .download-btn.yellow:hover {
+    box-shadow: 0 4px 20px rgba(234, 179, 8, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .download-label {
+    margin-top: 4px;
+    font-size: 10px;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+
+  .priority-glow-btn {
+    margin-top: 14px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+    color: #713f12;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), 0 4px 12px rgba(250, 204, 21, 0.3);
+    animation: yellowGlow 2s ease-in-out infinite;
+    align-self: flex-end;
+  }
+
+  .priority-glow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(250, 204, 21, 0.7), 0 6px 16px rgba(250, 204, 21, 0.4);
+  }
+
+  @keyframes yellowGlow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), 0 4px 12px rgba(250, 204, 21, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(250, 204, 21, 0.8), 0 6px 16px rgba(250, 204, 21, 0.5);
+    }
+  }
+
+  /* ===== Bottom Tip ===== */
+  .bottom-tip {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--border);
+    text-align: center;
+  }
+
+  .tip-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+
+  .tip-button {
+    padding: 12px 32px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .tip-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+  }
+
   .region-card-title {
     display: flex;
     align-items: center;
@@ -968,6 +1174,8 @@
 
   .region-section {
     margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
   }
 
   .region-section:last-child {
@@ -2008,8 +2216,8 @@
                 </svg>
               </div>
               <div class="info-text">
-                <strong>官方邮箱</strong>
-                <span>待定</span>
+                <strong>退款邮箱</strong>
+                <span>support@example.com</span>
               </div>
             </div>
           </div>
@@ -2027,15 +2235,28 @@
               <div class="region-section-title">
                 <span class="region-dot region-dot-green"></span>
                 <span>推广优先级</span>
-                <span class="region-count">4 个城市</span>
+                <span class="region-count">8 个城市</span>
               </div>
               <div class="region-tag-list">
                 <span class="region-tag region-tag-featured">浙江宁波为推广优先级</span>
+                <span class="region-tag region-tag-featured">山西太原为推广优先级</span>
                 <span class="region-tag region-tag-green">北京市为推广优先级</span>
                 <span class="region-tag region-tag-green">天津市为推广优先级</span>
+                <span class="region-tag region-tag-green">河北省为推广优先级</span>
                 <span class="region-tag region-tag-green">上海市为推广优先级</span>
               </div>
             </div>
+          </div>
+
+          <div class="download-section">
+            <a href="http://bankh5.payweipan.com/app/agent/12105" class="download-btn purple" onclick="playClickSound()" target="_blank" rel="noopener noreferrer">
+              📥 推广员APP下载
+              <span class="download-label">专为推广人员准备双后台</span>
+            </a>
+            <a href="http://bankh5.payweipan.com/app/mch/12105" class="download-btn yellow" onclick="playClickSound()" target="_blank" rel="noopener noreferrer">
+              📥 商家后台下载
+              <span class="download-label">专为商户下载后台</span>
+            </a>
           </div>
         </div>
       </section>
