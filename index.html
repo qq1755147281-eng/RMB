@@ -921,8 +921,9 @@
   .info-text {
     flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
   }
 
   .info-text strong {
@@ -2215,8 +2216,8 @@
                 </svg>
               </div>
               <div class="info-text">
-                <strong>官方邮箱</strong>
-                <span>待定</span>
+                <strong>退款邮箱</strong>
+                <span>support@example.com</span>
               </div>
             </div>
           </div>
@@ -2234,13 +2235,16 @@
               <div class="region-section-title">
                 <span class="region-dot region-dot-green"></span>
                 <span>推广优先级</span>
-                <span class="region-count">5 个城市</span>
+                <span class="region-count">8 个城市</span>
               </div>
               <div class="region-tag-list">
                 <span class="region-tag region-tag-featured">浙江宁波为推广优先级</span>
                 <span class="region-tag region-tag-featured">山西太原为推广优先级</span>
+                <span class="region-tag region-tag-green">北京市为推广优先级</span>
+                <span class="region-tag region-tag-green">天津市为推广优先级</span>
+                <span class="region-tag region-tag-green">河北省为推广优先级</span>
+                <span class="region-tag region-tag-green">上海市为推广优先级</span>
               </div>
-              <button class="priority-glow-btn" onclick="playClickSound()">北京市为推广优先级</button>
             </div>
           </div>
 
