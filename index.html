@@ -1092,6 +1092,36 @@
     font-weight: 500;
   }
 
+  .priority-glow-btn {
+    margin-top: 14px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+    color: #713f12;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), 0 4px 12px rgba(250, 204, 21, 0.3);
+    animation: yellowGlow 2s ease-in-out infinite;
+    align-self: flex-end;
+  }
+
+  .priority-glow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(250, 204, 21, 0.7), 0 6px 16px rgba(250, 204, 21, 0.4);
+  }
+
+  @keyframes yellowGlow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), 0 4px 12px rgba(250, 204, 21, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(250, 204, 21, 0.8), 0 6px 16px rgba(250, 204, 21, 0.5);
+    }
+  }
+
   /* ===== Bottom Tip ===== */
   .bottom-tip {
     margin-top: 24px;
@@ -1143,6 +1173,8 @@
 
   .region-section {
     margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
   }
 
   .region-section:last-child {
@@ -2207,10 +2239,8 @@
               <div class="region-tag-list">
                 <span class="region-tag region-tag-featured">浙江宁波为推广优先级</span>
                 <span class="region-tag region-tag-featured">山西太原为推广优先级</span>
-                <span class="region-tag region-tag-green">北京市为推广优先级</span>
-                <span class="region-tag region-tag-green">天津市为推广优先级</span>
-                <span class="region-tag region-tag-green">上海市为推广优先级</span>
               </div>
+              <button class="priority-glow-btn" onclick="playClickSound()">北京市为推广优先级</button>
             </div>
           </div>
 
