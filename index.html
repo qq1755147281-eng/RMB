@@ -46,13 +46,26 @@
   }
 
   .splash-image {
-    width: 200px;
-    height: 150px;
-    border-radius: 12px;
+    width: 220px;
+    height: 320px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    animation: breatheImage 1s ease-in-out infinite;
+    box-shadow: 0 0 30px rgba(255, 209, 0, 0.4), 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    animation: breatheImage 1.5s ease-in-out infinite;
+    position: relative;
+  }
+
+  .splash-image::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s ease-in-out infinite;
   }
 
   .store-image {
@@ -65,10 +78,21 @@
     0%, 100% {
       transform: scale(1);
       opacity: 1;
+      box-shadow: 0 0 20px rgba(255, 209, 0, 0.3), 0 8px 30px rgba(0, 0, 0, 0.25);
     }
     50% {
-      transform: scale(1.05);
-      opacity: 0.95;
+      transform: scale(1.08);
+      opacity: 0.9;
+      box-shadow: 0 0 40px rgba(255, 209, 0, 0.6), 0 12px 45px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(45deg);
     }
   }
 
@@ -1825,7 +1849,7 @@
   <div id="splash-screen" class="splash-screen">
     <div class="splash-content">
       <div class="splash-image">
-        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=modern%20retail%20store%20interior%20with%20digital%20payment%20terminal%20and%20red%20theme%20atmosphere%20professional%20photography&image_size=portrait_4_3" alt="门店场景" class="store-image">
+        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Chinese%20digital%20RMB%20wallet%20app%20interface%20red%20theme%20with%20banknote%20design%20modern%20mobile%20UI%20professional%20financial%20app%20screenshot&image_size=portrait_4_3" alt="数字人民币钱包" class="store-image">
       </div>
       <div class="splash-title">数字人民币</div>
       <div class="splash-subtitle">推广落地开启</div>
