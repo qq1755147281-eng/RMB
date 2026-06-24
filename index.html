@@ -22,6 +22,203 @@
     --shadow-lg: 0 8px 32px rgba(200, 16, 46, 0.12);
   }
 
+  /* ===== Splash Screen ===== */
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #c8102e 0%, #a00d24 50%, #c8102e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  .splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    z-index: 2;
+  }
+
+  .splash-bg-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .bg-rmb-icon {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .bg-rmb-icon svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .rmb-1 {
+    top: 10%;
+    right: 5%;
+    animation: floatBreathe 3s ease-in-out infinite;
+  }
+
+  .rmb-2 {
+    bottom: 20%;
+    left: -5%;
+    animation: floatBreathe 4s ease-in-out infinite 1s;
+  }
+
+  .rmb-3 {
+    top: 50%;
+    right: 20%;
+    animation: floatBreathe 3.5s ease-in-out infinite 0.5s;
+  }
+
+  @keyframes floatBreathe {
+    0%, 100% {
+      transform: scale(1) translateY(0);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.1) translateY(-10px);
+      opacity: 0.5;
+    }
+  }
+
+  .splash-main-icon {
+    animation: mainBreathe 1.5s ease-in-out infinite;
+  }
+
+  .main-rmb {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 20px rgba(255, 209, 0, 0.5));
+  }
+
+  @keyframes mainBreathe {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+      filter: drop-shadow(0 0 15px rgba(255, 209, 0, 0.4));
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0.9;
+      filter: drop-shadow(0 0 30px rgba(255, 209, 0, 0.8));
+    }
+  }
+
+  .splash-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 4px;
+  }
+
+  .splash-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 6px;
+    margin-top: 8px;
+  }
+
+  .splash-progress-container {
+    position: absolute;
+    bottom: 80px;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .splash-progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #d4af37 0%, #ffd700 50%, #ffed4a 100%);
+    border-radius: 2px;
+    width: 0%;
+    animation: fillProgress 0.5s ease-out forwards;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.8), 0 0 24px rgba(255, 215, 0, 0.4);
+  }
+
+  .progress-fill.gold {
+    background: linear-gradient(90deg, #b8860b 0%, #daa520 30%, #ffd700 50%, #ffed4a 70%, #ffd700 100%);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  @keyframes fillProgress {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .splash-percentage {
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    animation: countProgress 0.5s ease-out forwards;
+  }
+
+  @keyframes countProgress {
+    0% {
+      content: "0%";
+    }
+    100% {
+      content: "100%";
+    }
+  }
+
+  .splash-screen.hidden {
+    animation: fadeOut 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+
+  .main-content {
+    display: none;
+  }
+
+  .main-content.visible {
+    display: block;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -748,6 +945,164 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
     margin: 20px 0;
+  }
+
+  /* ===== Contact Page - Red Gold Theme ===== */
+  .contact-page {
+    padding: 0;
+  }
+
+  .contact-card {
+    background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(200, 16, 46, 0.3);
+    border: 1px solid rgba(255, 209, 0, 0.3);
+  }
+
+  .contact-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .header-decoration {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .gold-line {
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd100, transparent);
+  }
+
+  .gold-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffd100;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 209, 0, 0.6);
+  }
+
+  .contact-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffd100;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
+  .hotline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hotline-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 209, 0, 0.2);
+  }
+
+  .hotline-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .hotline-icon {
+    width: 36px;
+    height: 36px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .hotline-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hotline-number {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+
+  .contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .info-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(200, 16, 46, 0.1);
+    border-color: rgba(200, 16, 46, 0.2);
+  }
+
+  .info-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #c8102e 0%, #a00d24 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+  }
+
+  .info-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .info-content strong {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .info-content span {
+    font-size: 15px;
+    color: #5a5a5a;
+    font-weight: 500;
   }
 
   /* ===== Contact - Phone Hotline ===== */
@@ -1683,9 +2038,55 @@
 </style>
 </head>
 <body>
+  <!-- ===== Splash Screen ===== -->
+  <div id="splash-screen" class="splash-screen">
+    <div class="splash-bg-decoration">
+      <div class="bg-rmb-icon rmb-1">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
+          <text x="50" y="58" text-anchor="middle" font-size="24" fill="rgba(255, 209, 0, 0.2)" font-family="serif">¥</text>
+        </svg>
+      </div>
+      <div class="bg-rmb-icon rmb-2">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
+          <text x="50" y="58" text-anchor="middle" font-size="24" fill="rgba(255, 209, 0, 0.15)" font-family="serif">¥</text>
+        </svg>
+      </div>
+      <div class="bg-rmb-icon rmb-3">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
+          <text x="50" y="58" text-anchor="middle" font-size="24" fill="rgba(255, 209, 0, 0.12)" font-family="serif">¥</text>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="splash-content">
+      <div class="splash-main-icon">
+        <svg viewBox="0 0 100 100" class="main-rmb">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#ffd100" stroke-width="2"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="#ffd100" stroke-width="2"/>
+          <text x="50" y="62" text-anchor="middle" font-size="36" fill="#ffd100" font-family="serif" font-weight="bold">¥</text>
+        </svg>
+      </div>
+      <div class="splash-title">数字人民币推广渠道</div>
+    </div>
+    
+    <div class="splash-progress-container">
+      <div class="splash-progress-bar">
+        <div class="progress-fill gold"></div>
+      </div>
+      <div class="splash-percentage">0%</div>
+    </div>
+  </div>
 
-  <!-- Header -->
-  <header class="header">
+  <!-- ===== Main Content ===== -->
+  <div id="main-content" class="main-content">
+    <!-- Header -->
+    <header class="header">
     <div class="header-content">
       <div class="logo">
         <span class="logo-symbol">¥</span>
@@ -1903,7 +2304,8 @@
                 <div class="reward-benefits">
                   <h4>奖励规则</h4>
                   <ul>
-                    <li>每推广一个商家码牌成功，奖励 100 元整</li>
+                    <li>每推广一个真实商家码牌成功，奖励 100 元整</li>
+                    <li>商家开户需满 15 天且流水达到 1 万元方可获得奖励</li>
                     <li>薪资每月一结，特殊情况 15 天一结</li>
                     <li>检测为无效商家/无效支付流水后，不发放奖励</li>
                     <li>结算方式简单直接，快速到账</li>
@@ -1933,12 +2335,12 @@
                       <span class="rate-value">万分之二</span>
                     </div>
                     <div class="rate-item">
-                      <span class="rate-label">数币支付</span>
+                      <span class="rate-label">数字人民币</span>
                       <span class="rate-value">千分之一</span>
                     </div>
                     <div class="rate-item">
                       <span class="rate-label">先享后付</span>
-                      <span class="rate-value">0.6%</span>
+                      <span class="rate-value">百分之零点七</span>
                     </div>
                     <div class="rate-item">
                       <span class="rate-label">下级业务员分红</span>
@@ -1959,6 +2361,8 @@
                 <div class="reward-benefits">
                   <h4>奖励规则</h4>
                   <ul>
+                    <li>推广团队推广 30 名活跃推广员称为团队长</li>
+                    <li>推广奖励分为两部分，一是按支付流水的分红比例，还有额外推广奖励分红</li>
                     <li>享受个人分红比例基础上，增加团队分红</li>
                     <li>团队长可申请开通团队业务员账号</li>
                     <li>团队所有人账号推广的商家支付流水均享受额外 10% 分红</li>
@@ -1968,15 +2372,15 @@
                     <div class="reward-rate-title">团队长分红流水比例</div>
                     <div class="rate-item">
                       <span class="rate-label">普通支付</span>
-                      <span class="rate-value">万分之 2.5</span>
+                      <span class="rate-value">万分之三</span>
                     </div>
                     <div class="rate-item">
                       <span class="rate-label">数币支付</span>
-                      <span class="rate-value">千分之 1.2</span>
+                      <span class="rate-value">千分之一点五</span>
                     </div>
                     <div class="rate-item">
                       <span class="rate-label">先享后付</span>
-                      <span class="rate-value">0.8%</span>
+                      <span class="rate-value">千分之十</span>
                     </div>
                     <div class="rate-item">
                       <span class="rate-label">团队成员分红提成</span>
@@ -2017,7 +2421,7 @@
 
             <div class="material-section">
               <h4>五、物料损坏丢失赔偿规则</h4>
-              <p>所有推广码牌、宣传物料等银联推广物资，均由领用人员全权负责保管。凡出现物料丢失、人为损坏、破损报废、私自丢弃等情况，一经核实，按照单件物料初步 500 元标准进行损失赔偿，所有赔偿责任由对应领用推广人员自行承担。如因此造成更大损失、经济利益的情况，推广人员根据相对应损失进行赔偿。</p>
+              <p>所有推广码牌、宣传物料等银联推广物资，均由领用人员全权负责保管。凡出现物料丢失、人为损坏、破损报废、私自丢弃等情况，一经核实，按照单件物料初步 200 元标准进行损失赔偿，所有赔偿责任由对应领用推广人员自行承担。如因此造成更大损失、经济利益的情况，推广人员根据相对应损失进行赔偿。</p>
             </div>
 
             <div class="material-section">
@@ -2051,18 +2455,18 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td class="seq-cell">1</td><td class="name-cell">张伟</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/A/zw/abc</td></tr>
-                <tr><td class="seq-cell">2</td><td class="name-cell">李明</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/B/lm/def</td></tr>
-                <tr><td class="seq-cell">3</td><td class="name-cell">王芳</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/C/wf/ghi</td></tr>
-                <tr><td class="seq-cell">4</td><td class="name-cell">刘洋</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/D/ly/jkl</td></tr>
-                <tr><td class="seq-cell">5</td><td class="name-cell">陈强</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/E/cq/mno</td></tr>
-                <tr><td class="seq-cell">6</td><td class="name-cell">赵敏</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/F/zm/pqr</td></tr>
-                <tr><td class="seq-cell">7</td><td class="name-cell">钱伟</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/G/qw/stu</td></tr>
-                <tr><td class="seq-cell">8</td><td class="name-cell">孙丽</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/H/sl/vwx</td></tr>
-                <tr><td class="seq-cell">9</td><td class="name-cell">周杰</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/I/zj/yza</td></tr>
-                <tr><td class="seq-cell">10</td><td class="name-cell">吴婷</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">/J/wt/bcd</td></tr>
-                <tr><td class="seq-cell">11</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
-                <tr><td class="seq-cell">12</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
+                <tr><td class="seq-cell">1</td><td class="name-cell">张伟</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/A/zw/abc</td></tr>
+                <tr><td class="seq-cell">2</td><td class="name-cell">李明</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">江苏省</td><td class="remark-cell">/B/lm/def</td></tr>
+                <tr><td class="seq-cell">3</td><td class="name-cell">王芳</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/C/wf/ghi</td></tr>
+                <tr><td class="seq-cell">4</td><td class="name-cell">刘洋</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/D/ly/jkl</td></tr>
+                <tr><td class="seq-cell">5</td><td class="name-cell">陈强</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">山东省</td><td class="remark-cell">/E/cq/mno</td></tr>
+                <tr><td class="seq-cell">6</td><td class="name-cell">赵敏</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/F/zm/pqr</td></tr>
+                <tr><td class="seq-cell">7</td><td class="name-cell">钱伟</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/G/qw/stu</td></tr>
+                <tr><td class="seq-cell">8</td><td class="name-cell">孙丽</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/H/sl/vwx</td></tr>
+                <tr><td class="seq-cell">9</td><td class="name-cell">周杰</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/I/zj/yza</td></tr>
+                <tr><td class="seq-cell">10</td><td class="name-cell">吴婷</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/J/wt/bcd</td></tr>
+                <tr><td class="seq-cell">11</td><td class="name-cell">乔森</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">浙江省</td><td class="remark-cell">/W/qson/wqs</td></tr>
+                <tr><td class="seq-cell">12</td><td class="name-cell">高铁涛</td><td class="role-cell">推广员</td><td class="status-cell">正常</td><td class="address-cell">安徽省</td><td class="remark-cell">/W/gtt/.gtt</td></tr>
                 <tr><td class="seq-cell">13</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
                 <tr><td class="seq-cell">14</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
                 <tr><td class="seq-cell">15</td><td class="name-cell">待确认</td><td class="role-cell">团队长</td><td class="status-cell">正常</td><td class="address-cell">省份</td><td class="remark-cell">///</td></tr>
@@ -2159,91 +2563,79 @@
       <!-- ===== 联系我们 ===== -->
       <section id="view-contact" class="view">
         <h1 class="page-title">联系我们</h1>
-        <div class="page-content">
-          <p>如果您有任何问题或需要帮助，请通过以下方式联系我们：</p>
-
-          <div class="phone-breathe-container">
-            <a href="tel:15536455536" class="phone-breathe-wrapper" style="text-decoration: none; color: inherit;">
-              <div class="phone-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
+        <div class="page-content contact-page">
+          <div class="contact-card">
+            <div class="contact-header">
+              <div class="header-decoration">
+                <span class="gold-line"></span>
+                <span class="gold-dot"></span>
+                <span class="gold-line"></span>
               </div>
-              <div class="phone-breathe-label">服务热线</div>
-              <div class="phone-breathe-number">15536455536</div>
-            </a>
-            <a href="tel:13157491153" class="phone-breathe-wrapper" style="text-decoration: none; color: inherit;">
-              <div class="phone-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
+              <h2 class="contact-title">服务热线</h2>
+              <div class="header-decoration">
+                <span class="gold-line"></span>
+                <span class="gold-dot"></span>
+                <span class="gold-line"></span>
               </div>
-              <div class="phone-breathe-label">服务热线</div>
-              <div class="phone-breathe-number">13157491153</div>
-            </a>
+            </div>
+            
+            <div class="hotline-list">
+              <a href="tel:15536455536" class="hotline-item" onclick="playClickSound()">
+                <div class="hotline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <span class="hotline-number">155-3645-5536</span>
+              </a>
+              <a href="tel:13157491153" class="hotline-item" onclick="playClickSound()">
+                <div class="hotline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <span class="hotline-number">131-5749-1153</span>
+              </a>
+            </div>
           </div>
 
-          <div class="info-section">
-            <div class="info-row">
-              <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="contact-info-grid">
+            <div class="info-card">
+              <div class="info-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
               </div>
-              <div class="info-text">
+              <div class="info-content">
                 <strong>工作时间</strong>
                 <span>周一至周五 9:00-18:00</span>
               </div>
             </div>
-            <div class="info-row">
-              <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+            <div class="info-card">
+              <div class="info-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
               </div>
-              <div class="info-text">
+              <div class="info-content">
                 <strong>办公地址</strong>
                 <span>浙江省宁波市</span>
               </div>
             </div>
-            <div class="info-row">
-              <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+            <div class="info-card">
+              <div class="info-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
               </div>
-              <div class="info-text">
-                <strong>退款邮箱</strong>
+              <div class="info-content">
+                <strong>官方邮箱</strong>
                 <span>support@example.com</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="region-card">
-            <div class="region-card-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 24px; height: 24px;">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <h3>中国各省份区域开通数字人民币授权可推广的为下列</h3>
-            </div>
-
-            <div class="region-section">
-              <div class="region-section-title">
-                <span class="region-dot region-dot-green"></span>
-                <span>推广优先级</span>
-                <span class="region-count">8 个城市</span>
-              </div>
-              <div class="region-tag-list">
-                <span class="region-tag region-tag-featured">浙江宁波为推广优先级</span>
-                <span class="region-tag region-tag-featured">山西太原为推广优先级</span>
-                <span class="region-tag region-tag-green">北京市为推广优先级</span>
-                <span class="region-tag region-tag-green">天津市为推广优先级</span>
-                <span class="region-tag region-tag-green">河北省为推广优先级</span>
-                <span class="region-tag region-tag-green">上海市为推广优先级</span>
               </div>
             </div>
           </div>
@@ -2311,6 +2703,32 @@
   </footer>
 
   <script>
+    // ===== Splash Screen Initialization =====
+    document.addEventListener('DOMContentLoaded', function() {
+      var splashScreen = document.getElementById('splash-screen');
+      var mainContent = document.getElementById('main-content');
+      var percentageText = document.querySelector('.splash-percentage');
+      
+      var startTime = Date.now();
+      var duration = 400;
+      
+      var progressInterval = setInterval(function() {
+        var elapsed = Date.now() - startTime;
+        var progress = Math.min(elapsed / duration, 1);
+        var percentage = Math.round(progress * 100);
+        percentageText.textContent = percentage + '%';
+        
+        if (progress >= 1) {
+          clearInterval(progressInterval);
+          splashScreen.classList.add('hidden');
+          setTimeout(function() {
+            splashScreen.style.display = 'none';
+            mainContent.classList.add('visible');
+          }, 100);
+        }
+      }, 16);
+    });
+
     // 点击音效生成函数（Web Audio API，无需外部文件）
     var audioContext = null;
     function playClickSound() {
