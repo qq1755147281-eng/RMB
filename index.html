@@ -38,6 +38,18 @@
     overflow: hidden;
   }
 
+  .splash-top-percentage {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 209, 0, 0.9);
+    text-shadow: 0 0 20px rgba(255, 209, 0, 0.5);
+    letter-spacing: 2px;
+    z-index: 3;
+  }
+
   .splash-content {
     display: flex;
     flex-direction: column;
@@ -2032,32 +2044,28 @@
 <body>
   <!-- ===== Splash Screen ===== -->
   <div id="splash-screen" class="splash-screen">
+    <div class="splash-top-percentage">0%</div>
+    
     <div class="splash-bg-decoration">
       <div class="bg-rmb-icon rmb-1">
         <svg viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
           <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
-          <path d="M25 50 L75 50" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
-          <path d="M50 25 L50 75" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
-          <circle cx="50" cy="50" r="6" fill="rgba(255, 209, 0, 0.2)"/>
+          <text x="50" y="58" text-anchor="middle" font-size="24" fill="rgba(255, 209, 0, 0.2)" font-family="serif">¥</text>
         </svg>
       </div>
       <div class="bg-rmb-icon rmb-2">
         <svg viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
           <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
-          <path d="M25 50 L75 50" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
-          <path d="M50 25 L50 75" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
-          <circle cx="50" cy="50" r="6" fill="rgba(255, 209, 0, 0.15)"/>
+          <text x="50" y="58" text-anchor="middle" font-size="24" fill="rgba(255, 209, 0, 0.15)" font-family="serif">¥</text>
         </svg>
       </div>
       <div class="bg-rmb-icon rmb-3">
         <svg viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
           <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
-          <path d="M25 50 L75 50" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
-          <path d="M50 25 L50 75" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
-          <circle cx="50" cy="50" r="6" fill="rgba(255, 209, 0, 0.12)"/>
+          <text x="50" y="58" text-anchor="middle" font-size="24" fill="rgba(255, 209, 0, 0.12)" font-family="serif">¥</text>
         </svg>
       </div>
     </div>
@@ -2067,9 +2075,7 @@
         <svg viewBox="0 0 100 100" class="main-rmb">
           <circle cx="50" cy="50" r="45" fill="none" stroke="#ffd100" stroke-width="2"/>
           <circle cx="50" cy="50" r="35" fill="none" stroke="#ffd100" stroke-width="2"/>
-          <path d="M20 50 L80 50" stroke="#ffd100" stroke-width="2"/>
-          <path d="M50 20 L50 80" stroke="#ffd100" stroke-width="2"/>
-          <circle cx="50" cy="50" r="8" fill="#ffd100"/>
+          <text x="50" y="62" text-anchor="middle" font-size="36" fill="#ffd100" font-family="serif" font-weight="bold">¥</text>
         </svg>
       </div>
       <div class="splash-title">数字人民币推广渠道</div>
@@ -2703,6 +2709,7 @@
       var splashScreen = document.getElementById('splash-screen');
       var mainContent = document.getElementById('main-content');
       var percentageText = document.querySelector('.splash-percentage');
+      var topPercentageText = document.querySelector('.splash-top-percentage');
       
       var startTime = Date.now();
       var duration = 500;
@@ -2712,6 +2719,7 @@
         var progress = Math.min(elapsed / duration, 1);
         var percentage = Math.round(progress * 100);
         percentageText.textContent = percentage + '%';
+        topPercentageText.textContent = percentage + '%';
         
         if (progress >= 1) {
           clearInterval(progressInterval);
