@@ -42,57 +42,80 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
+    z-index: 2;
   }
 
-  .splash-image {
-    width: 220px;
-    height: 320px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 0 30px rgba(255, 209, 0, 0.4), 0 10px 40px rgba(0, 0, 0, 0.3);
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    animation: breatheImage 1.5s ease-in-out infinite;
-    position: relative;
-  }
-
-  .splash-image::before {
-    content: "";
+  .splash-bg-decoration {
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: rotate(45deg);
-    animation: shine 3s ease-in-out infinite;
-  }
-
-  .store-image {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
   }
 
-  @keyframes breatheImage {
+  .bg-rmb-icon {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .bg-rmb-icon svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .rmb-1 {
+    top: 10%;
+    right: 5%;
+    animation: floatBreathe 3s ease-in-out infinite;
+  }
+
+  .rmb-2 {
+    bottom: 20%;
+    left: -5%;
+    animation: floatBreathe 4s ease-in-out infinite 1s;
+  }
+
+  .rmb-3 {
+    top: 50%;
+    right: 20%;
+    animation: floatBreathe 3.5s ease-in-out infinite 0.5s;
+  }
+
+  @keyframes floatBreathe {
+    0%, 100% {
+      transform: scale(1) translateY(0);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.1) translateY(-10px);
+      opacity: 0.5;
+    }
+  }
+
+  .splash-main-icon {
+    animation: mainBreathe 1.5s ease-in-out infinite;
+  }
+
+  .main-rmb {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 20px rgba(255, 209, 0, 0.5));
+  }
+
+  @keyframes mainBreathe {
     0%, 100% {
       transform: scale(1);
       opacity: 1;
-      box-shadow: 0 0 20px rgba(255, 209, 0, 0.3), 0 8px 30px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(0 0 15px rgba(255, 209, 0, 0.4));
     }
     50% {
-      transform: scale(1.08);
+      transform: scale(1.15);
       opacity: 0.9;
-      box-shadow: 0 0 40px rgba(255, 209, 0, 0.6), 0 12px 45px rgba(0, 0, 0, 0.35);
-    }
-  }
-
-  @keyframes shine {
-    0% {
-      transform: translateX(-100%) rotate(45deg);
-    }
-    100% {
-      transform: translateX(100%) rotate(45deg);
+      filter: drop-shadow(0 0 30px rgba(255, 209, 0, 0.8));
     }
   }
 
@@ -113,23 +136,27 @@
 
   .splash-progress-bar {
     position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
+    bottom: 60px;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
     overflow: hidden;
   }
 
   .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #ffd100 0%, #ffffff 100%);
-    border-radius: 3px;
+    background: linear-gradient(90deg, #d4af37 0%, #ffd700 50%, #ffed4a 100%);
+    border-radius: 2px;
     width: 0%;
     animation: fillProgress 0.5s ease-out forwards;
-    box-shadow: 0 0 10px rgba(255, 209, 0, 0.5);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.8), 0 0 24px rgba(255, 215, 0, 0.4);
+  }
+
+  .progress-fill.gold {
+    background: linear-gradient(90deg, #b8860b 0%, #daa520 30%, #ffd700 50%, #ffed4a 70%, #ffd700 100%);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   @keyframes fillProgress {
@@ -2005,15 +2032,51 @@
 <body>
   <!-- ===== Splash Screen ===== -->
   <div id="splash-screen" class="splash-screen">
-    <div class="splash-content">
-      <div class="splash-image">
-        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Chinese%20digital%20RMB%20wallet%20app%20interface%20red%20theme%20with%20banknote%20design%20modern%20mobile%20UI%20professional%20financial%20app%20screenshot&image_size=portrait_4_3" alt="数字人民币钱包" class="store-image">
+    <div class="splash-bg-decoration">
+      <div class="bg-rmb-icon rmb-1">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
+          <path d="M25 50 L75 50" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
+          <path d="M50 25 L50 75" stroke="rgba(255, 209, 0, 0.15)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="6" fill="rgba(255, 209, 0, 0.2)"/>
+        </svg>
       </div>
-      <div class="splash-title">数字人民币</div>
-      <div class="splash-subtitle">推广落地开启</div>
+      <div class="bg-rmb-icon rmb-2">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
+          <path d="M25 50 L75 50" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
+          <path d="M50 25 L50 75" stroke="rgba(255, 209, 0, 0.1)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="6" fill="rgba(255, 209, 0, 0.15)"/>
+        </svg>
+      </div>
+      <div class="bg-rmb-icon rmb-3">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
+          <path d="M25 50 L75 50" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
+          <path d="M50 25 L50 75" stroke="rgba(255, 209, 0, 0.08)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="6" fill="rgba(255, 209, 0, 0.12)"/>
+        </svg>
+      </div>
     </div>
+    
+    <div class="splash-content">
+      <div class="splash-main-icon">
+        <svg viewBox="0 0 100 100" class="main-rmb">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#ffd100" stroke-width="2"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="#ffd100" stroke-width="2"/>
+          <path d="M20 50 L80 50" stroke="#ffd100" stroke-width="2"/>
+          <path d="M50 20 L50 80" stroke="#ffd100" stroke-width="2"/>
+          <circle cx="50" cy="50" r="8" fill="#ffd100"/>
+        </svg>
+      </div>
+      <div class="splash-title">数字人民币推广渠道</div>
+    </div>
+    
     <div class="splash-progress-bar">
-      <div class="progress-fill"></div>
+      <div class="progress-fill gold"></div>
     </div>
     <div class="splash-percentage">0%</div>
   </div>
