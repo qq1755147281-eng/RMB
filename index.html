@@ -38,18 +38,6 @@
     overflow: hidden;
   }
 
-  .splash-top-percentage {
-    position: absolute;
-    top: 60px;
-    right: 30px;
-    font-size: 28px;
-    font-weight: 700;
-    color: rgba(255, 209, 0, 0.9);
-    text-shadow: 0 0 20px rgba(255, 209, 0, 0.5);
-    letter-spacing: 2px;
-    z-index: 3;
-  }
-
   .splash-content {
     display: flex;
     flex-direction: column;
@@ -146,11 +134,19 @@
     margin-top: 8px;
   }
 
-  .splash-progress-bar {
+  .splash-progress-container {
     position: absolute;
-    bottom: 60px;
+    bottom: 80px;
     left: 10%;
     right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .splash-progress-bar {
+    width: 100%;
     height: 4px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 2px;
@@ -2044,8 +2040,6 @@
 <body>
   <!-- ===== Splash Screen ===== -->
   <div id="splash-screen" class="splash-screen">
-    <div class="splash-top-percentage">0%</div>
-    
     <div class="splash-bg-decoration">
       <div class="bg-rmb-icon rmb-1">
         <svg viewBox="0 0 100 100">
@@ -2081,10 +2075,12 @@
       <div class="splash-title">数字人民币推广渠道</div>
     </div>
     
-    <div class="splash-progress-bar">
-      <div class="progress-fill gold"></div>
+    <div class="splash-progress-container">
+      <div class="splash-progress-bar">
+        <div class="progress-fill gold"></div>
+      </div>
+      <div class="splash-percentage">0%</div>
     </div>
-    <div class="splash-percentage">0%</div>
   </div>
 
   <!-- ===== Main Content ===== -->
@@ -2709,7 +2705,6 @@
       var splashScreen = document.getElementById('splash-screen');
       var mainContent = document.getElementById('main-content');
       var percentageText = document.querySelector('.splash-percentage');
-      var topPercentageText = document.querySelector('.splash-top-percentage');
       
       var startTime = Date.now();
       var duration = 500;
@@ -2719,7 +2714,6 @@
         var progress = Math.min(elapsed / duration, 1);
         var percentage = Math.round(progress * 100);
         percentageText.textContent = percentage + '%';
-        topPercentageText.textContent = percentage + '%';
         
         if (progress >= 1) {
           clearInterval(progressInterval);
