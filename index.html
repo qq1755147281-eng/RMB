@@ -45,36 +45,30 @@
     gap: 20px;
   }
 
-  .splash-logo {
-    animation: breatheLogo 1s ease-in-out infinite;
+  .splash-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    animation: breatheImage 1s ease-in-out infinite;
   }
 
-  .logo-inner {
-    width: 120px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+  .store-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .rmb-icon {
-    width: 80px;
-    height: 80px;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
-  }
-
-  @keyframes breatheLogo {
+  @keyframes breatheImage {
     0%, 100% {
       transform: scale(1);
       opacity: 1;
     }
     50% {
-      transform: scale(1.1);
-      opacity: 0.9;
+      transform: scale(1.05);
+      opacity: 0.95;
     }
   }
 
@@ -1830,16 +1824,8 @@
   <!-- ===== Splash Screen ===== -->
   <div id="splash-screen" class="splash-screen">
     <div class="splash-content">
-      <div class="splash-logo">
-        <div class="logo-inner">
-          <svg viewBox="0 0 100 100" class="rmb-icon">
-            <circle cx="50" cy="50" r="45" fill="none" stroke="#c8102e" stroke-width="2"/>
-            <circle cx="50" cy="50" r="35" fill="none" stroke="#c8102e" stroke-width="2"/>
-            <path d="M30 50 L70 50" stroke="#c8102e" stroke-width="2"/>
-            <path d="M50 30 L50 70" stroke="#c8102e" stroke-width="2"/>
-            <circle cx="50" cy="50" r="8" fill="#c8102e"/>
-          </svg>
-        </div>
+      <div class="splash-image">
+        <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=modern%20retail%20store%20interior%20with%20digital%20payment%20terminal%20and%20red%20theme%20atmosphere%20professional%20photography&image_size=portrait_4_3" alt="门店场景" class="store-image">
       </div>
       <div class="splash-title">数字人民币</div>
       <div class="splash-subtitle">推广落地开启</div>
