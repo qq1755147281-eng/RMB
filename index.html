@@ -2710,7 +2710,7 @@
       var percentageText = document.querySelector('.splash-percentage');
       
       var startTime = Date.now();
-      var duration = 500;
+      var duration = 400;
       
       var progressInterval = setInterval(function() {
         var elapsed = Date.now() - startTime;
@@ -2720,13 +2720,11 @@
         
         if (progress >= 1) {
           clearInterval(progressInterval);
+          splashScreen.classList.add('hidden');
           setTimeout(function() {
-            splashScreen.classList.add('hidden');
-            setTimeout(function() {
-              splashScreen.style.display = 'none';
-              mainContent.classList.add('visible');
-            }, 300);
-          }, 200);
+            splashScreen.style.display = 'none';
+            mainContent.classList.add('visible');
+          }, 100);
         }
       }, 16);
     });
